@@ -1,5 +1,5 @@
 import React from "react";
-const Home = React.lazy(() => import("./components/pages/Home"));
+const Home = React.lazy(() => import("./components/pages/Post"));
 const Shop = React.lazy(() => import("./components/pages/Shop"));
 const About = React.lazy(() => import("./components/pages/About"));
 
