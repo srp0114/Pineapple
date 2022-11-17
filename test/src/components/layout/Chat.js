@@ -4,7 +4,7 @@ import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
-import Chatting from "../pages/Chatting";
+import Chatting from "../layout/Chatting";
 import "../style/Chat.css"
 
 const Chat = () => {
