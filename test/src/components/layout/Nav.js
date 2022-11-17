@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import routes from "../../routes.js";
-import "./Nav.css"
+import "../style/Nav.css"
 import Search from "./Search.js"
 
 const Nav = () => {
