@@ -75,7 +75,7 @@ const Chatting = () => {
 
   return (
   <>
-    <h1>채팅 예시</h1>
+    <h1>채팅</h1>
     <ChatContainer messageList={messageList} />
     <form onSubmit={submit}>
       <input
