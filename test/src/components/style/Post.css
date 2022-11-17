@@ -1,0 +1,57 @@
+
+.postDiv {
+  margin: 50px;
+  /*display: inline-flex;*/
+}
+.postLeftSide {
+  margin-right: 50px;
+}
+
+.userProfile {
+  float: left;
+}
+.userProfileAvatar {
+  /*display: inline-block;*/
+  width: 70px;
+}
+
+.userProfileId {
+  font-size: 20px;
+  /*font-weight: bold;*/
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.descriptions {
+  font-size: 30px;
+  /*width: 700px;*/
+  /*width: max-content;*/
+}
+.descriptionsItem {
+  font-size: 25px;
+  /*width: max-content;*/
+}
+
+.tr { display: block; float: left; }
+/*th, td { display: block; }*/
+.th { display: block; }
+.td { display: block; }
+
+ 
+.postButtons {
+  display: flex;
+  width: 450px;
+  justify-content: space-around;
+  /*justify-content: space-evenly;*/
+}
+.postButtonItem {
+  flex-basis: 130px;
+  /*size: large;*/
+}
+
+.test {
+  /*width: fit-content;*/
+  /*flex-basis: fit-content;*/
+  border-style: solid;
+}
+  
