@@ -2,8 +2,7 @@ import React, { Suspense, lazy } from "react";
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Nav from "./components/layout/Nav"
-import Chat from "./components/layout/Chat"
-import routes from"./routes"
+import routes from "./routes.js"
 const App = () => {
     return(
       

@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import data from '../data.js';
-import './Shop.css'
+import '../style/Shop.css'
 
 const Home = () => {
     const [cards, setCards] = useState(data);

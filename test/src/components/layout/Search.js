@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import { Input, Space } from 'antd';
 import Chat from "./Chat.js"
-import "./Search.css"
+import "../style/Search.css"
 import {AiOutlineUser} from "react-icons/ai";
 const { Search } = Input;
 

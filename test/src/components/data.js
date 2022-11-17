@@ -1,6 +1,6 @@
-import image0 from "./pineapple3.jpg"
-import image1 from "./pineapple.png"
-import image2 from "./pineapple2.PNG"
+import image0 from "./images/pineapple3.jpg"
+import image1 from "./images/pineapple.png"
+import image2 from "./images/pineapple2.PNG"
 
 export default [
     {
@@ -35,7 +35,7 @@ export default [
         title : "Black Bag",
         change : "마포",
         content : "Born in Paris",
-        address : "마포구"
+        address : "마포구",
     },
 
     {

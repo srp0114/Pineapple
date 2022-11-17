@@ -5,7 +5,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
 
-import "./Chat.css"
+import "../style/Chat.css"
 
 const Chat = () => {
   const [open, setOpen] = useState(false);
