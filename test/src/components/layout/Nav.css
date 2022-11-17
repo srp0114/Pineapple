@@ -1,0 +1,28 @@
+.div-nav {
+  margin-top:5%;
+}
+
+nav {
+  margin-top:0.5%;
+  margin-left:5%;
+  margin-right:5%;
+  margin-bottom:3%;
+  position: fixed;
+  width: 100%;
+  display: flex;
+}
+
+
+.navlink {
+  margin-right:5%;
+  margin-bottom:5%;
+}
+
+/*
+nav > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
