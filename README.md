@@ -1,1 +1,1 @@
-# Git_One
+# Pineapple 물물교환 사이트

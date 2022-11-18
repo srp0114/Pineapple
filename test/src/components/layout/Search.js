@@ -14,6 +14,7 @@ const App = () => {
 };
     return (
         <>
+        <div><p>Login</p></div>
         <Space className="search">
             <div>
             <Search placeholder="교환하고 싶은 물건은?"  style={{ width: 300 }} />
