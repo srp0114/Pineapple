@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Nav from "./components/layout/Nav"
 import routes from "./routes.js"
+import MyPage, { Sell,LikeList, Setting } from "./components/pages/MyPage";
 const App = () => {
     return(
       
@@ -23,7 +24,12 @@ const App = () => {
               )
             );
           })}
-          
+          <Route path="/mypage" element={<MyPage />}></Route>
+          <Route path="/mypage/*" element={<MyPage />}>
+            <Route path="" element={<Sell />} />
+            <Route path="likelist" element={<LikeList />} />
+            <Route path="setting" element={<Setting />} />
+          </Route>
           <Route path="*" element={<>Not found</>} />
           </Routes>
           </Suspense>

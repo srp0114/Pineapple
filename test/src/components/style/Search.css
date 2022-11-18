@@ -5,6 +5,8 @@
   }
 
 .icon {
+  width: 30px;
+  height: 30px;
     margin-left:15px;
     margin-right:15px;
 }

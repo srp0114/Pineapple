@@ -25,12 +25,11 @@ const Header = () => {
               )
             );
           })}
-          
+          <Route path="/mypage" element={<MyPage />}></Route>
           <Route path="*" element={<>Not found</>} />
           </Routes>
           </Suspense>
         </BrowserRouter>
-
       </div>
       </>
        

@@ -1,8 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import routes from "../../routes.js";
 import "../style/Nav.css"
 import Search from "./Search.js"
+import MyPage from "../pages/MyPage.js";
 
 const Nav = () => {
   return (
@@ -25,11 +26,9 @@ const Nav = () => {
               </NavLink>
             </div>
           ))}
-           
-        </nav> 
-        <Search/>
+        </nav>
+        <Search/>        
       </div>
-      
     </>
   );
 };
