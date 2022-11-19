@@ -20,9 +20,8 @@ const App = () => {
         <Space className="search">
             <div>
             <ChakraProvider>
-
             {/*  <Search placeholder="교환하고 싶은 물건은?"  style={{ width: 300 }} />*/}
-            <Input focusBorderColor='#285943 ' placeholder='교환하고 싶은 물건은?' />
+            <Input focusBorderColor='#285943' placeholder='교환하고 싶은 물건은?' style={{fontSize:'1em'}} />
             </ChakraProvider>
 
             </div>

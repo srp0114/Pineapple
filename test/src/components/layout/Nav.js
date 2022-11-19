@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <>
       <div className="div-nav">
-        <nav>
+        <nav className="navigation">
           {routes.map((route) => (
             <div key={route.name} className="navlink">
               <NavLink
@@ -27,7 +27,9 @@ const Nav = () => {
             </div>
           ))}
         </nav>
+        <div>
         <Search/>        
+        </div>
       </div>
     </>
   );
