@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import "../style/index.css";
+import "../style/Login.css";
 import { Input } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -59,83 +59,85 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="page">
-      <div className="titleWrap">
-        <br />
-        회원정보를 입력해주세요
-      </div>
-
-      <div className="contentWrap">
-        <div className="inputTitle">이메일 주소</div>
-        <div className="inputWrap">
-          <ChakraProvider>
-            <Input
-              focusBorderColor="#285943"
-              size="lg"
-              fontSize="1em"
-              className="input"
-              type="text"
-              placeholder="test@gmail.com"
-              value={email}
-              onChange={handleEmail}
-            ></Input>
-          </ChakraProvider>
-        </div>
-        <div className="errorMessageWrap">
-          {!emailValid && email.length > 0 && (
-            <div>올바른 이메일을 입력해주세요.</div>
-          )}
+    <div className="container">
+      <div className="page">
+        <div className="titleWrap">
+          <br />
+          회원정보를 입력해주세요
         </div>
 
-        <div className="inputTitle">이름</div>
-        <div className="inputWrap">
-          <ChakraProvider>
-            <Input
-              focusBorderColor="#285943"
-              size="lg"
-              fontSize="1em"
-              className="input"
-              type="text"
-              placeholder="test@gmail.com"
-              value={name}
-              onChange={handleName}
-            ></Input>
-          </ChakraProvider>
-        </div>
+        <div className="contentWrap">
+          <div className="inputTitle">이메일 주소</div>
+          <div className="inputWrap">
+            <ChakraProvider>
+              <Input
+                focusBorderColor="#285943"
+                size="lg"
+                fontSize="1em"
+                className="input"
+                type="text"
+                placeholder="test@gmail.com"
+                value={email}
+                onChange={handleEmail}
+              ></Input>
+            </ChakraProvider>
+          </div>
+          <div className="errorMessageWrap">
+            {!emailValid && email.length > 0 && (
+              <div>올바른 이메일을 입력해주세요.</div>
+            )}
+          </div>
 
-        <div style={{ marginTop: "26px" }} className="inputTitle">
-          비밀번호
+          <div className="inputTitle">이름</div>
+          <div className="inputWrap">
+            <ChakraProvider>
+              <Input
+                focusBorderColor="#285943"
+                size="lg"
+                fontSize="1em"
+                className="input"
+                type="text"
+                placeholder="test@gmail.com"
+                value={name}
+                onChange={handleName}
+              ></Input>
+            </ChakraProvider>
+          </div>
+
+          <div style={{ marginTop: "26px" }} className="inputTitle">
+            비밀번호
+          </div>
+          <div className="inputWrap">
+            <ChakraProvider>
+              <Input
+                focusBorderColor="#285943"
+                size="lg"
+                fontSize="1em"
+                className="input"
+                type="password"
+                placeholder="영문, 숫자, 특수문자 포함 8자 이상"
+                value={pw}
+                onChange={handlePw}
+              ></Input>
+            </ChakraProvider>
+          </div>
+          <div className="errorMessageWrap">
+            {!pwValid && pw.length > 0 && (
+              <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
+            )}
+          </div>
         </div>
-        <div className="inputWrap">
-          <ChakraProvider>
-            <Input
-              focusBorderColor="#285943"
-              size="lg"
-              fontSize="1em"
-              className="input"
-              type="password"
-              placeholder="영문, 숫자, 특수문자 포함 8자 이상"
-              value={pw}
-              onChange={handlePw}
-            ></Input>
-          </ChakraProvider>
+        <div>
+          <Link to="../">
+            <button
+              onClick={onClickConfirmButton}
+              disabled={notAllow}
+              className="bottomButton"
+            >
+              등록
+            </button>
+          </Link>
         </div>
-        <div className="errorMessageWrap">
-          {!pwValid && pw.length > 0 && (
-            <div>영문, 숫자, 특수문자 포함 8자 이상 입력해주세요.</div>
-          )}
-        </div>
-      </div>
-      <div>
-        <Link to="../">
-          <button
-            onClick={onClickConfirmButton}
-            disabled={notAllow}
-            className="bottomButton"
-          >
-            등록
-          </button>
-        </Link>
       </div>
     </div>
   );
