@@ -1,36 +1,56 @@
 import React, { useState }from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button } from '@chakra-ui/react'
+import { Global } from "@emotion/react";
 import data from '../data.js';
-import '../style/Shop.css'
+import "../style/Shop.css";
 
-const Home = () => {
+
+const Fonts = () => (
+        <Global styles = {`
+            @font-face {
+            font-family: "NanumSquare";
+            src: url("../fonts/NanumSquareNeo-cBd.ttf");
+        }
+        `} 
+    />
+)
+
+const Shop = () => {
     const [cards, setCards] = useState(data);
+    const theme = extendTheme({fonts:{heading:'NanumSquare'},})
 
     return (
         <>
         <div className="Item">
             {cards.map((card, i) => {
                 return (
-                    <Card className="Card">
-                    <CardMedia
-                        component="img"
-                        image={card.image}
-                    />
-                    <CardContent>
-                        <p>{card.title}</p>
-                        <p>{card.change}</p>
-                        <p>{card.address}</p>
-                    </CardContent>
-                    <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
-                    </CardActions>
+                    <ChakraProvider theme ={theme}>
+                    <Card maxW='sm' className="Card">
+                        <CardBody key={i}>
+                            <Image
+                            src={card.image}
+                            borderRadius='lg'
+                            />
+                            <Stack mt='4' spacing='3'>
+                                <Heading size='md' color='#285943'>{card.title}</Heading>
+                                <Text>{card.change}</Text>
+                                <Text>{card.address}</Text>
+                            </Stack>
+                        </CardBody>
+                        <Divider />
+                        <CardFooter>
+                            <ButtonGroup spacing='2'>
+                            <Button variant='solid' colorScheme='blue'>
+                                Details
+                            </Button>
+                            <Button variant='ghost' colorScheme='blue'>
+                                Add to cart
+                            </Button>
+                            </ButtonGroup>
+                        </CardFooter>
                     </Card>
-
+                    </ChakraProvider>
                 )
             })}
       </div>
@@ -38,5 +58,5 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Shop;
 

@@ -5,9 +5,9 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import data from '../data.js';
-import './Home.css'
+import '../style/Shop.css'
 
-const Home = () => {
+const Card = () => {
     const [cards, setCards] = useState(data);
 
     return (
@@ -26,8 +26,8 @@ const Home = () => {
                         <p>{card.address}</p>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">Details</Button>
                         <Button size="small">Share</Button>
+                        <Button size="small">Learn More</Button>
                     </CardActions>
                     </Card>
 
@@ -38,5 +38,4 @@ const Home = () => {
     )
 }
 
-export default Home;
-
+export default Card;
