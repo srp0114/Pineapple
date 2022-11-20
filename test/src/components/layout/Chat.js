@@ -9,44 +9,60 @@ import "../style/Chat.css"
 
 const Chat = () => {
   const [open, setOpen] = useState(false);
-  const [size, setSize] = useState();
+  const [childrenDrawer, setChildrenDrawer] = useState(false);
 
-  const showDefaultDrawer = () => {
-    setSize('default');
+  const showDrawer = () => {
     setOpen(true);
   };
-  
-  const showLargeDrawer = () => {
-    setSize('large');
-    setOpen(true);
-  };
+
   const onClose = () => {
     setOpen(false);
   };
-  
+
+  const showChildrenDrawer = () => {
+    setChildrenDrawer(true);
+  };
+
+  const onChildrenDrawerClose = () => {
+    setChildrenDrawer(false);
+  };
+
   return (
     <>
       <Space>
-      <Chip label="CHAT" color="success" variant="outlined" onClick={showLargeDrawer} />
+      <Chip label="CHAT" color="success" variant="outlined" onClick={showDrawer} />
       {/* <ChatOutlinedIcon onClick={showLargeDrawer}/> */}
       </Space>
-      <Drawer
-        title="채팅방"
-        placement="left"
-        size={size}
-        onClose={onClose}
-        open={open}
+
+      <Drawer 
+        title="채팅목록" 
+        width={650} 
+        placement="left" 
+        closable={false} 
+        onClose={onClose} 
+        open={open} 
         extra={
           <Space>
             <Button onClick={onClose}>Cancel</Button>
-            <Button type="primary" onClick={onClose}>
-              OK
-            </Button>
+            <Button type="primary" onClick={onClose}> OK </Button>
           </Space>
-        }
-      >
-        <Chatting/>
+        }>
+          <Button type="primary" onClick={showChildrenDrawer}>
+            채팅방 열기
+          </Button>
+        <Drawer
+          title="채팅방"
+          width={600}
+          placement="left"
+          closable={false}
+          onClose={onChildrenDrawerClose}
+          open={childrenDrawer}
+        >
+          <Chatting/>
+        </Drawer>
       </Drawer>
+
+
     </>
   );
 };
