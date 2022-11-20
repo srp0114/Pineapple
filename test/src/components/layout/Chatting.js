@@ -1,73 +1,55 @@
-import styled from 'styled-components';
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import ChatContainer from './ChatContainer';
 import "../style/Chat.css";
-// import { authService, dbService } from '../service/firebase';
-// import { sendChat, getChats, initGetChats } from '../helper/database';
-// import { ref, onChildAdded, onChildChanged, get, remove } from "firebase/database";
+//firebase
+import { authService, dbService } from '../../service/firebase';
+import { sendChat, getName } from '../../helper/database';
+import { ref, onValue } from "firebase/database";
 //import { useNavigate } from 'react-router-dom';
-//import MessageForm from './components/MessageForm';
 
 const Chatting = () => {
   const [message, setMessage] = useState("");
-  //const [messageList, setMessageList] = useState(getChats({roomId : "yes"}));
   const [messageList, setMessageList] = useState([])
   //const navigate = useNavigate()
-  //const [user, setUser] = useState(authService.currentUser)
+  const [user, setUser] = useState(authService.currentUser)
+  const [userNames, setUserNames] = useState(getName())
 
-//   const getChatList = async() => {
-//     try {
-//       await getChats({roomId : "yes"});
-//     } catch (error) {
-//       console.log(error)
-//     }
-//   }
+  useEffect(() => {
+    //setUserNames(getName())
+    onValue(ref(dbService, `chat/yes`), (snapshot) => {
+        let chats = []
+        snapshot.forEach((row) => {
+            chats.push(row.val())
+        })
+        setMessageList(chats)
+      })
+  }, [])
 
   const submit = async (e) => {
     e.preventDefault();
     //sendMessage();
-    // if(message != "") {
-    //   try {
-    //     await sendChat({
-    //       roomId: "yes",
-    //       message: message,
-    //       timestamp: Date.now(),
-    //       uid: user.uid
-    //     })
-    //     //setMessageList((list)=>[...list,messageData]);
-    //     newMessage()
-        
-    //   } catch (error) {
-    //       console.log(error)
-    //     }
-    //   //setMessageList(getChats({roomId : "yes"}))
-    // }
     if(message != "") {
-        setMessageList((list)=>[...list,message]);
-        setMessage("");
+      try {
+        await sendChat({
+          roomId: "yes",
+          message: message,
+          timestamp: Date.now(),
+          uid: user.uid
+        })
+      } catch (error) {
+          console.log(error)
+        }
     }
+    setMessage("");
   };
 
-//   const newMessage = () => {
-//     let newMessageList = []
-//         getChats({roomId : "yes"}).forEach((element) => {
-//           if(!newMessageList.includes(element)) {
-//             newMessageList.push(element)
-//           }
-//         })
-//         setMessageList(newMessageList)
-//   }
+  //로그인이 풀리면(user 정보가 null이면) 해야되는 일
+  // useEffect(() => {
+  //   console.log(user)
+  //   if(user == null) navigate('/')
+  //   }, [user])
 
-
-//   useEffect(() => {
-//     console.log(user)
-//     if(user == null) navigate('/')
-//     }, [user])
-
-    useEffect(() => {
-        console.log(messageList)
-    }, [messageList])
-
+//로그아웃 처리
 //   const logOut = () => {
 //     authService.signOut()
 //     alert("로그아웃 되셨습니다.")
@@ -77,7 +59,7 @@ const Chatting = () => {
   return (
   <>
     <h1>채팅 예시</h1>
-    <ChatContainer messageList={messageList} />
+    <ChatContainer messageList={messageList} myUid={user.uid} names={userNames} />
     <form onSubmit={submit} id="chatForm">
       <input id="chatInput"
         value={message}

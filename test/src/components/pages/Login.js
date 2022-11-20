@@ -3,11 +3,14 @@ import React, { useEffect, useState } from "react";
 import "../style/Login.css";
 import { Input } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
+//firebase auth
+import { authService } from "../../service/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
-const User = {
-  email: "test@example.com",
-  pw: "test2323@@@",
-};
+// const User = {
+//   email: "test@example.com",
+//   pw: "test2323@@@",
+// };
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -45,12 +48,21 @@ export default function Login() {
       setPwValid(false);
     }
   };
-  const onClickConfirmButton = () => {
-    if (email === User.email && pw === User.pw) {
-      alert("로그인에 성공했습니다.");
-    } else {
-      alert("등록되지 않은 회원입니다.");
+  const onClickConfirmButton = async() => {
+    if(email !== "" && pw !== "") {
+      try {
+        await signInWithEmailAndPassword(authService, email, pw)
+        alert("로그인에 성공했습니다.");
+      } catch (eroor) {
+        alert("등록되지 않은 회원입니다.");
+      }
     }
+
+    // if (email === User.email && pw === User.pw) {
+    //   alert("로그인에 성공했습니다.");
+    // } else {
+    //   alert("등록되지 않은 회원입니다.");
+    // }
   };
 
   return (

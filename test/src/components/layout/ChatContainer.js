@@ -3,11 +3,11 @@ import MessageBox from "./MessageBox";
 import styled from 'styled-components';
 
 //const ChatContainer = ({messageList = [], myUid}) => {
-const ChatContainer = ({messageList = []}) => {
+const ChatContainer = ({messageList = [], myUid, names}) => {
     console.log(`ChatContainer : ${messageList}`)
     return (
         <StyledChatContainer>
-            {messageList.map((chat, i) => <MessageBox key={i} isMymessage={1} message={chat} />)}
+            {messageList.map((chat, i) => <MessageBox key={i} name={names.find(user => chat.uid === user.uid ? true : false).name} isMymessage={myUid === chat.uid ? true : false} message={chat.message} />)}
         </StyledChatContainer>
     );
 }
