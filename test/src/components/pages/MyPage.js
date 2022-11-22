@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import Nav from "../layout/Nav";
 import { MyPageMenu } from "../layout/MyPageMenu";
 import profile_img from "../images/profile.png";
-import ReigsterPage from "../pages/RegisterPage";
 
 const MyPage = () => {
   return (
@@ -31,7 +30,7 @@ const onClickConfirmButton = () => {
   alert("비밀번호가 변경되었습니다.");
 };
 
-const PageTemplate = ({ children }) => <div className="page">{children}</div>;
+const PageTemplate = ({ children }) => <div className="page1">{children}</div>;
 
 //판매상품
 export const Sell = () => (

@@ -108,3 +108,10 @@
   width: 600px;
   margin: 0 auto;
 }
+
+.page {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
