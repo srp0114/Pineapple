@@ -3,10 +3,11 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/layout/Nav";
 import routes from "./routes.js";
-import MyPage, { Sell, LikeList, Setting } from "./components/pages/MyPage";
-import Login from "./components/pages/Login";
+import MyPage from "./components/pages/MyPage";
+import {Setting} from "./components/pages/Setting"
+import {LikeList} from "./components/pages/LikeList";
+import {Sell} from "./components/pages/Sell";
 import RegisterPage from "./components/pages/RegisterPage";
-import Home from "./components/pages/Home";
 
 const Header = () => {
   return (

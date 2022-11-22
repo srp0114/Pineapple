@@ -1,0 +1,38 @@
+.mypage {
+    display:flex;
+}
+
+.mypage-menu {
+    border-right: 1px solid #e0e0e0;
+    list-style: none;
+    padding: 12px 24px; 
+    width: auto;
+    height: auto;  
+    line-height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile {
+    line-height: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color:gray;
+}
+
+li {
+    font-size: 15px;
+}
+
+img {
+    padding-left: 10%;
+}

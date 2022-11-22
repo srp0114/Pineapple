@@ -16,12 +16,12 @@ const Fonts = () => (
     />
 )
 
-const Shop = () => {
+export const Sell = () => {
     const [cards, setCards] = useState(data);
     const theme = extendTheme({fonts:{heading:'NanumSquare'},})
 
     return (
-        <>
+        <section className="likelist">
         <div className="Item">
             {cards.map((card, i) => {
                 return (
@@ -53,10 +53,9 @@ const Shop = () => {
                     </ChakraProvider>
                 )
             })}
-      </div>
-     </>
+    </div>
+    </section>
     )
 }
 
-export default Shop;
-
+export default Sell;

@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Profile } from "../pages/MyPage";
+import "../style/MyPage.css"
 
 export const MyPageMenu = () => (
     <div className="mypage-menu">
