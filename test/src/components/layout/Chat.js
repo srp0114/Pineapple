@@ -29,8 +29,10 @@ const Chat = () => {
 
   return (
     <>
+
       <Space>
-      <Chip label="CHAT" color="success" variant="outlined" onClick={showDrawer} />
+      <Chip label="물물교환 하러가기" color="success" variant="outlined" onClick={showDrawer} />
+
       {/* <ChatOutlinedIcon onClick={showLargeDrawer}/> */}
       </Space>
 

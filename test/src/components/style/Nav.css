@@ -1,5 +1,9 @@
+
 .div-nav {
-  margin-top:5%;
+  margin-top:4%;
+  margin-left:2%;
+  float:left;
+  width:50%;
 }
  
 .navigation {
@@ -18,7 +22,7 @@ nav {
 }
 
 .navlink {
-  margin-right:5%;
+  margin-right:10%;
   margin-bottom:5%;
 }
 

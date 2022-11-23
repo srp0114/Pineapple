@@ -1,13 +1,17 @@
 import React from "react";
-import { NavLink, Route } from "react-router-dom";
+import { NavLink, Route, Link } from "react-router-dom";
 import routes from "../../routes.js";
 import "../style/Nav.css"
 import Search from "./Search.js"
 import MyPage from "../pages/MyPage.js";
+import banner from "../images/banner.png";
+import { Badge } from "antd";
+import Chip from '@mui/material/Chip';
 
 const Nav = () => {
   return (
     <>
+    <div>
       <div className="div-nav">
         <nav className="navigation">
           {routes.map((route) => (
@@ -27,9 +31,13 @@ const Nav = () => {
             </div>
           ))}
         </nav>
-        <div>
+
+      </div>
+
+      <div>
         <Search/>        
-        </div>
+      </div>
+
       </div>
     </>
   );

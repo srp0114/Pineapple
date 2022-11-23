@@ -2,10 +2,12 @@ import React, { useEffect, useState }from "react";
 import { ChakraProvider, extendTheme, propNames } from '@chakra-ui/react'
 import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button } from '@chakra-ui/react'
 import { Global } from "@emotion/react";
-import { Badge } from "antd";
-import banner from "../images/banner.png";
 import data from '../data.js';
 import '../style/Home.css'
+import banner from "../images/banner.png";
+import { Badge } from "antd";
+import Carousel from 'react-material-ui-carousel'
+
 
 const Fonts = () => (
     <Global styles = {`
@@ -26,8 +28,9 @@ const Home = () => {
         <>
         <div>
         <div>
-            <Badge className="box1" size="default" count={<img src={banner} width="1000" />}/>
+            <Badge size="default" count={<img src={banner} width="90%" />}/>
         </div>
+        
         <div className="Item">
         {cards.map((card, i) => {
                 return (
@@ -58,10 +61,10 @@ const Home = () => {
                     </Card>
                     </ChakraProvider>
                 )
-            })}
+            })} 
+            </div>
       </div>
 
-        </div>
        
       </>
     )
