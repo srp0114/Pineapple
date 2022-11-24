@@ -19,7 +19,6 @@ const App = () => {
     return (
         <>
         
-        <div>
         <div className="login">
             <Link to="../login">
                 <Chip label="로그인" color="success" variant="outlined" className="loginBtn"/>
@@ -28,21 +27,20 @@ const App = () => {
             <Chat/>
         </div>
 
-        <div>
         <Space className="search">
             <div>
             <ChakraProvider>
             {/*  <Search placeholder="교환하고 싶은 물건은?"  style={{ width: 300 }} />*/}
             <Input focusBorderColor='#285943' placeholder='교환하고 싶은 물건은?' style={{fontSize:'1em'}} />
             </ChakraProvider>
-
+            
             </div>
-            <div onClick={navigateToMyPage} className="icon">
-                <AiOutlineUser size="32"/>
-            </div>
+            
         </Space>
+        <div onClick={navigateToMyPage}>
+                <AiOutlineUser size="32" className="icon"/>
         </div>
-        </div>
+        
     </>
     );
 };
