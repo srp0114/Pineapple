@@ -1,13 +1,13 @@
 .search {
     margin:2%;
-    margin-left:22%;
+    display:flex;
   }
 
 .icon {
   width: 30px;
   height: 30px;
-    margin-left:15px;
-    margin-right:15px;
+  margin-left:15px;
+  margin-right:15px;
 }
 
 .login {
