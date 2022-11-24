@@ -4,10 +4,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/layout/Nav";
 import routes from "./routes.js";
 import MyPage from "./components/pages/MyPage";
-import {Setting} from "./components/pages/Setting"
-import {LikeList} from "./components/pages/LikeList";
-import {Sell} from "./components/pages/Sell";
+import { Setting } from "./components/pages/Setting";
+import { LikeList } from "./components/pages/LikeList";
+import { Sell } from "./components/pages/Sell";
 import RegisterPage from "./components/pages/RegisterPage";
+import Login from "./components/pages/Login";
 
 const Header = () => {
   return (
@@ -29,7 +30,7 @@ const Header = () => {
             })}
 
             {/* <Route path="/about/*" element={<RegisterPage />}></Route> */}
-            
+
             <Route path="/login" element={<Login />}></Route>
             <Route path="/login/*" element={<RegisterPage />}></Route>
             <Route path="/mypage" element={<MyPage />}></Route>
