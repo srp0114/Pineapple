@@ -27,14 +27,19 @@ const Header = () => {
                 )
               );
             })}
+
             {/* <Route path="/about/*" element={<RegisterPage />}></Route> */}
+            
             <Route path="/login/*" element={<RegisterPage />}></Route>
+
             <Route path="/mypage" element={<MyPage />}></Route>
+
             <Route path="/mypage/*" element={<MyPage />}>
               <Route path="" element={<Sell />} />
               <Route path="likelist" element={<LikeList />} />
               <Route path="setting" element={<Setting />} />
             </Route>
+
             <Route path="*" element={<>Not found</>} />
           </Routes>
         </Suspense>

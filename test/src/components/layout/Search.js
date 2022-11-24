@@ -4,9 +4,10 @@ import {  Space } from 'antd';
 import Chat from "./Chat.js"
 import "../style/Search.css"
 import {AiOutlineUser} from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Input } from '@chakra-ui/react'
 import { ChakraProvider } from '@chakra-ui/react'
+import Chip from '@mui/material/Chip';
 
 //const { Search } = Input;
 
@@ -17,6 +18,17 @@ const App = () => {
 };
     return (
         <>
+        
+        <div>
+        <div className="login">
+            <Link to="../login">
+                <Chip label="로그인" color="success" variant="outlined" className="loginBtn"/>
+            </Link>
+
+            <Chat/>
+        </div>
+
+        <div>
         <Space className="search">
             <div>
             <ChakraProvider>
@@ -28,8 +40,9 @@ const App = () => {
             <div onClick={navigateToMyPage} className="icon">
                 <AiOutlineUser size="32"/>
             </div>
-            <Chat/>
         </Space>
+        </div>
+        </div>
     </>
     );
 };

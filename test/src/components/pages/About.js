@@ -9,12 +9,7 @@ const About = () => {
     <div>
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
       <Badge size="default" count={<img src={banner} width="1000" />}></Badge>
       <br />
       <br />

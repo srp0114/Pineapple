@@ -1,7 +1,6 @@
 .search {
-    display: flex;
-    margin-right:4%;
-    float:right;
+    margin:2%;
+    margin-left:22%;
   }
 
 .icon {
@@ -9,4 +8,13 @@
   height: 30px;
     margin-left:15px;
     margin-right:15px;
+}
+
+.login {
+  margin-top:3%;
+}
+
+.loginBtn {
+  margin-right:1%;
+  margin-left:25%;
 }

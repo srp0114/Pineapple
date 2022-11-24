@@ -10,7 +10,8 @@ const Message = ({isMymessage, message}) => {
 
 const StyledMessage = styled.span`
     margin-bottom: 0.5rem;
-    background: ${props => (props.isMymessage ? 'yellow': 'white')};
+    background: ${props => (props.isMymessage ? 'yellow': 'green')};
+    color: ${props => (props.isMymessage ? 'black': 'white')};
     width: fit-content;
     padding: 12px;
     border-radius: 0.5rem;
