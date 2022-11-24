@@ -42,5 +42,15 @@
   flex-basis: 130px;
   /*size: large;*/
   background-color: #285943;
-  border: none;
+  border-color: #285943;
+}
+.postButtonItem:hover {
+  color: #285943;
+  background-color: white;
+  border-color: #285943;
+}
+.postButtonItem:focus {
+  color: white;
+  background-color: #285943;
+  border-color: #285943;
 }

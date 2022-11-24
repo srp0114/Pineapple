@@ -21,6 +21,8 @@ const TransactionCompleted = () => {
 const TransactionCompletedBtn = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [available, setAvailable] = useState(true);
+    const [btnText, setBtnText] = useState("후기 보내기");
 
     const handleSubmit = () => {
         setLoading(true);
@@ -28,12 +30,18 @@ const TransactionCompletedBtn = () => {
             setLoading(false);
             setModalOpen(false);
         }, 1000);
+
+        // 후기보내기 버튼 비활성화, 텍스트 바꾸기
+        setAvailable(false);
+        setBtnText("후기 보내기 완료");
     };
 
     return (
         <>
-        <Button type="primary" onClick={() => setModalOpen(true)}>
-            {<EditOutlined />} 후기 보내기
+        <Button type="primary" shape="round" className='transactionCompletedBtn'
+         onClick={() => setModalOpen(true)}
+         disabled={!available}>
+            {<EditOutlined />}{btnText}
         </Button>
         
         <Modal
@@ -50,10 +58,15 @@ const TransactionCompletedBtn = () => {
             onOk={() => setModalOpen(false)}
             onCancel={() => setModalOpen(false)}
             footer={[
-                <Button key="back" onClick={() => setModalOpen(false)}>
+                <Button key="back" shape="round"
+                 onClick={() => setModalOpen(false)}
+                 className='modalBtn1'>
                   Cancel
                 </Button>,
-                <Button key="submit" type="primary" loading={loading} onClick={handleSubmit}>
+                <Button key="submit" type="primary" shape="round"
+                 loading={loading}
+                 onClick={handleSubmit}
+                 className='modalBtn2'>
                   Submit
                 </Button>,
             ]}

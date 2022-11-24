@@ -1,9 +1,22 @@
+.transactionCompletedBtn {
+    background-color: #285943;
+    border: none;
+}
+.transactionCompletedBtn:hover {
+    background-color: #285943;
+    border: none;
+}
+.transactionCompletedBtn:focus {
+    background-color: #285943;
+    border: none;
+}
+
 .modalTitle {
     font-size: 20px;
     font-weight: bold;
 }
 .userName {
-    color: yellowgreen;
+    color: #285943;
 }
 
 .emojiRadioGroup {
@@ -23,4 +36,35 @@
 }
 .emojiLabel {
     padding: 5px 15px;
+}
+
+.modalBtn1 {
+    flex-basis: 80px;
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
+    
+}
+.modalBtn1:hover {
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
+}
+.modalBtn1:focus {
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
+}
+.modalBtn2 {
+    flex-basis: 80px;
+    background-color: #285943;
+    border: none;
+}
+.modalBtn2:hover {
+    color: white;
+    background-color: #285943;
+}
+.modalBtn2:focus {
+    color: white;
+    background-color: #285943;
 }

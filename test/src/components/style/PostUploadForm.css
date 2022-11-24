@@ -22,7 +22,29 @@
   background-color: #285943;
   border: none;
 }
+.formButtonItem1:hover {
+  flex-basis: 80px;
+  background-color: #285943;
+  border: none;
+}
+.formButtonItem1:focus {
+  flex-basis: 80px;
+  background-color: #285943;
+  border: none;
+}
 .formButtonItem2 {
+  flex-basis: 80px;
+  color: #285943;
+  background-color: white;
+  border-color: #285943;
+}
+.formButtonItem2:hover {
+  flex-basis: 80px;
+  color: #285943;
+  background-color: white;
+  border-color: #285943;
+}
+.formButtonItem2:focus {
   flex-basis: 80px;
   color: #285943;
   background-color: white;

@@ -121,7 +121,7 @@ const PostButtons = () => {
     <div className='postButtons'>
       <Button id='heartBtn'
       type="primary" shape="round"
-      icon={like ? <HeartFilled /> : <HeartOutlined />}
+      icon={like ? <HeartFilled style={{ color: '#eb2f96' }}/> : <HeartOutlined />}
       size="large"
       className='postButtonItem'
       onClick={()=>{setLike(!like);}}
