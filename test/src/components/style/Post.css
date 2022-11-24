@@ -10,9 +10,6 @@
 .userProfile {
   float: left;
 }
-.userProfileAvatar {
-  width: 70px;
-}
 
 .userProfileId {
   font-size: 20px;
@@ -25,12 +22,13 @@
   font-size: 17px;
   font-weight: bold;
 }
-.postDescription {
-  font-size: 15px;
+
+.descriptionTable {
+  margin-left: 50px;
 }
-.label {
-  font-weight: bold;
-  margin-bottom: 1px;
+.descriptionTd {
+  text-align: left;
+  padding-left: 20px;
 }
  
 .postButtons {

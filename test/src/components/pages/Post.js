@@ -19,6 +19,7 @@ const Post = () => {
       <br/><br/><br/>
       <UserProfile/>
       <Divider/>
+      <br/>
 
       <Row >
         <Col flex="300px" className='postLeftSide'>
@@ -89,19 +90,27 @@ const PostImage = (props) => {
 }
 
 const PostDescription = (props) => (
-  <div className='postDescription'>
-      <p className='label'>사용자 ID</p>
-      <p>user1</p>
-      <br/>
-      <p className='label'>희망교환템</p>
-      <p>{props.data.change}</p>
-      <br/>
-      <p className='label'>거래 지역</p>
-      <p>{props.data.address}</p>
-      <br/>
-      <p className='label'>상세정보</p>
-      <p>{props.data.content}</p>
-  </div>
+  <table className='descriptionTable'>
+    <tr>
+      <th>사용자 ID</th>
+      <td className='descriptionTd'>user1</td>
+    </tr>
+    <br/>
+    <tr>
+      <th>희망교환템</th>
+      <td className='descriptionTd'>{props.data.change}</td>
+    </tr>
+    <br/>
+    <tr>
+      <th>거래 지역</th>
+      <td className='descriptionTd'>{props.data.address}</td>
+    </tr>
+    <br/>
+    <tr>
+      <th>상세정보</th>
+      <td className='descriptionTd'>{props.data.content}</td>
+    </tr>
+  </table>
 )
 
 const PostButtons = () => {
