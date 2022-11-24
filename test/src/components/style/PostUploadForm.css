@@ -1,15 +1,30 @@
+.postForm {
+  width: 650px;
+  margin: auto;
+}
+
 .postFormTitle {
-    margin: 30px;
+  margin: 30px;
 }
 
 .formButtons {
-    float: right;
-    margin-right: 20px;
-    display: flex;
-    width: 200px;
-    justify-content: space-around;
-    /*justify-content: space-evenly;*/
-  }
-  .formButtonItem {
-    flex-basis: 80px;
-  }
+  float: right;
+  margin-right: 20px;
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  color: #285943;
+  /*justify-content: space-evenly;*/
+}
+
+.formButtonItem1 {
+  flex-basis: 80px;
+  background-color: #285943;
+  border: none;
+}
+.formButtonItem2 {
+  flex-basis: 80px;
+  color: #285943;
+  background-color: white;
+  border-color: #285943;
+}

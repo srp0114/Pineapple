@@ -1,18 +1,17 @@
 import React from 'react';
 import { PlusOutlined } from '@ant-design/icons';
-import { Form, Input, Button, DatePicker, Upload, Typography, Divider } from 'antd';
+import { Form, Upload, Typography, Divider, Button } from 'antd';
 import '../style/PostForm.css';
-const { RangePicker } = DatePicker;
-const { TextArea } = Input;
+import { ChakraProvider, Input, Textarea } from '@chakra-ui/react'
 const { Title } = Typography;
 
-const PostUploadForm = () => {
+const PostForm = () => {
   return (
-    <>
+    <div className='postForm'>
     <PostFormTitle/>
     <Divider orientation="left" />
     <FormContent/>
-    </>
+    </div>
   );
 };
 
@@ -35,19 +34,19 @@ const FormContent = () => (
       >
         
         <Form.Item label="상품명">
-          <Input />
+          <ChakraProvider>
+          <Input isRequired={true} focusBorderColor="#285943" />
+          </ChakraProvider>
         </Form.Item>
 
         <Form.Item label="희망교환템">
-          <Input />
-        </Form.Item>
-        
-        <Form.Item label="DatePicker">
-          <DatePicker />
+          <ChakraProvider>
+          <Input focusBorderColor="#285943"/>
+          </ChakraProvider>
         </Form.Item>
        
         <Form.Item label="Upload" valuePropName="fileList">
-          <Upload action="/upload.do" listType="picture-card">
+          <Upload size="" action="/upload.do" listType="picture-card">
             <div>
               <PlusOutlined />
               <div
@@ -62,38 +61,35 @@ const FormContent = () => (
         </Form.Item>
 
         <Form.Item label="상세 정보">
-          <TextArea rows={4} />
+          <ChakraProvider>
+          <Textarea focusBorderColor="#285943"/>
+          </ChakraProvider>
         </Form.Item>
+        
     </Form>
     
     <br/>
     <FormBtn/>
     </>
-      
 )
 
 const FormBtn = () => (
-    <div className='formButtons'>
-        <Button type="primary" shape="round" size="large" className='formButtonItem' /*onClick={chatBtnClicked}*/ danger>
-            취소
-        </Button>
+  <div className='formButtons'>
+      <Button type="primary" shape="round" size="large" className='formButtonItem2' /*onClick={chatBtnClicked}*/>
+          취소
+      </Button>
 
-        <Button type="primary" shape="round" size="large" className='formButtonItem' /*onClick={chatBtnClicked}*/>
-            등록
-        </Button>
-    </div>
-  )
+      <Button type="primary" shape="round" size="large" className='formButtonItem1' /*onClick={chatBtnClicked}*/>
+          등록
+      </Button>
+  </div>
+)
 
-export default PostUploadForm;
 
-/*
-<Form.Item>
-            <Button type="primary" shape="round" size="large" className='buttons' onClick={chatBtnClicked} danger>
-            취소
-            </Button>
+  function uploadBtnClicked() {
+    // 빈 input form 있나 검사
 
-            <Button type="primary" shape="round" size="large" className='buttons' onClick={chatBtnClicked}>
-            등록
-            </Button>
-        </Form.Item>
-*/
+    alert("내용을 모두 입력해주세요.");
+  }
+
+export default PostForm;

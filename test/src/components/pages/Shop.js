@@ -4,7 +4,7 @@ import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Di
 import { Global } from "@emotion/react";
 import data from '../data.js';
 import "../style/Shop.css";
-
+import { Link } from "react-router-dom";
 
 const Fonts = () => (
         <Global styles = {`
@@ -41,9 +41,11 @@ const Shop = () => {
                         <Divider />
                         <CardFooter>
                             <ButtonGroup spacing='2'>
-                            <Button variant='solid' colorScheme='blue'>
-                                Details
-                            </Button>
+                            <Link to='/post' state={{data: card}}>
+                                <Button variant='solid' colorScheme='blue'>
+                                    Details
+                                </Button>
+                            </Link>
                             <Button variant='ghost' colorScheme='blue'>
                                 Add to cart
                             </Button>

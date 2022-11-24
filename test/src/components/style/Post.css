@@ -1,7 +1,7 @@
 
 .postDiv {
-  margin: 50px;
-  /*display: inline-flex;*/
+  margin: auto;
+  width: 800px;
 }
 .postLeftSide {
   margin-right: 50px;
@@ -11,7 +11,6 @@
   float: left;
 }
 .userProfileAvatar {
-  /*display: inline-block;*/
   width: 70px;
 }
 
@@ -22,35 +21,28 @@
   display: inline-block;
 }
 
-.descriptions {
-  font-size: 30px;
-  /*width: 700px;*/
-  /*width: max-content;*/
+.postTitle {
+  font-size: 17px;
+  font-weight: bold;
 }
-.descriptionsItem {
-  font-size: 25px;
-  /*width: max-content;*/
+.postDescription {
+  font-size: 15px;
 }
-
-.tr { display: block; float: left; }
-/*th, td { display: block; }*/
-.th { display: block; }
-.td { display: block; }
-
+.label {
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+ 
 .postButtons {
   display: flex;
-  width: 450px;
+  width: 300px;
   justify-content: space-around;
+  margin: auto;
   /*justify-content: space-evenly;*/
 }
 .postButtonItem {
   flex-basis: 130px;
   /*size: large;*/
+  background-color: #285943;
+  border: none;
 }
-
-.test {
-  /*width: fit-content;*/
-  /*flex-basis: fit-content;*/
-  border-style: solid;
-}
-  
