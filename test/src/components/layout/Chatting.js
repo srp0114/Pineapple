@@ -5,6 +5,8 @@ import "../style/Chat.css";
 import { authService, dbService } from '../../service/firebase';
 import { sendChat, getName } from '../../helper/database';
 import { ref, onValue } from "firebase/database";
+import { ChakraProvider } from "@chakra-ui/react";
+import { Input, Button } from "@chakra-ui/react";
 //import { useNavigate } from 'react-router-dom';
 
 const Chatting = () => {
@@ -58,15 +60,22 @@ const Chatting = () => {
 
   return (
   <>
-    <h1>채팅 예시</h1>
+    
     <ChatContainer messageList={messageList} myUid={user.uid} names={userNames} />
+    <ChakraProvider>
     <form onSubmit={submit} id="chatForm">
-      <input id="chatInput"
-        value={message}
-        onChange={event => setMessage(event.target.value)}
-        type="text" placeholder="텍스트를 입력해주세요..." />
-      <button>보내기</button>
+      
+        <Input
+          mx={[1]}
+          focusBorderColor="#285943"
+          value={message}
+          onChange={event => setMessage(event.target.value)}
+          type="text" placeholder="텍스트를 입력해주세요..."
+        />
+        <Button type='submit' mx={[1]} colorScheme='teal' size='md'>보내기</Button>
+    
     </form>
+    </ChakraProvider>
   </>
 );
 }

@@ -3,17 +3,14 @@ Chip {
 }
 
 #chatForm {
-    background: rgba(0, 0, 0, 0.15);
-    padding: 0.25rem;
+    background: white;
+    padding: 0.2rem;
     height: 3rem;
     box-sizing: border-box;
     backdrop-filter: blur(10px);
     display: flex;
     flex-basis: 100%;
     flex-grow: 1;
-}
-
-#chatInput {
-    display: flex;
-    flex-basis: 91.8%;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid #000;
 }
