@@ -9,6 +9,7 @@ import { LikeList } from "./components/pages/LikeList";
 import { Sell } from "./components/pages/Sell";
 import RegisterPage from "./components/pages/RegisterPage";
 import Login from "./components/pages/Login";
+import Post from "./components/pages/Post";
 
 const Header = () => {
   return (
@@ -30,10 +31,14 @@ const Header = () => {
             })}
 
             {/* <Route path="/about/*" element={<RegisterPage />}></Route> */}
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/login/*" element={<RegisterPage />}></Route>
 
             <Route path="/login" element={<Login />}></Route>
             <Route path="/login/*" element={<RegisterPage />}></Route>
             <Route path="/mypage" element={<MyPage />}></Route>
+
+            <Route path="/post" element={<Post />}></Route>
 
             <Route path="/mypage/*" element={<MyPage />}>
               <Route path="" element={<Sell />} />
