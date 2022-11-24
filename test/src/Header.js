@@ -30,8 +30,8 @@ const Header = () => {
 
             {/* <Route path="/about/*" element={<RegisterPage />}></Route> */}
             
+            Route path="/login" element={<Login />}></Route>
             <Route path="/login/*" element={<RegisterPage />}></Route>
-
             <Route path="/mypage" element={<MyPage />}></Route>
 
             <Route path="/mypage/*" element={<MyPage />}>
