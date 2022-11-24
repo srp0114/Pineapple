@@ -17,7 +17,8 @@ const Fonts = () => (
 )
 
 export const Sell = () => {
-    const [cards, setCards] = useState(data);
+    const product = [data[1], data[3], data[5]];
+    const [cards, setCards] = useState(product);
     const theme = extendTheme({fonts:{heading:'NanumSquare'},})
 
     return (
