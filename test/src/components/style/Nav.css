@@ -21,11 +21,11 @@ nav {
   display: flex;
 }
 
-.navlink {
-  margin-right:10%;
-  margin-bottom:5%;
-}
 
+.navlink {
+  margin-left:10px;
+  margin-right:50px;
+}
 /*
 nav > div {
   width: 100%;

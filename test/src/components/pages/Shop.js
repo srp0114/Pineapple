@@ -5,6 +5,7 @@ import { Global } from "@emotion/react";
 import data from '../data.js';
 import "../style/Shop.css";
 import { Link } from "react-router-dom";
+import Nav from "../layout/Nav"
 
 const Fonts = () => (
         <Global styles = {`
@@ -22,6 +23,7 @@ const Shop = () => {
 
     return (
         <>
+        <Nav/>
         <div className="Item">
             {cards.map((card, i) => {
                 return (

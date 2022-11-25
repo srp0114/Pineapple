@@ -3,16 +3,21 @@ import { Outlet } from "react-router-dom";
 import Nav from "../layout/Nav";
 import { MyPageMenu } from "../layout/MyPageMenu";
 import profile_img from "../images/profile.png";
+
 import "../style/MyPage.css"
 
 const MyPage = () => {
   return (
+    <>
+    <Nav/>
     <PageTemplate>
       <section className="mypage">
         <MyPageMenu />
         <Outlet />
       </section>
     </PageTemplate>
+    </>
+
   );
 };
 

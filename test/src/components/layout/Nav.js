@@ -11,12 +11,9 @@ import Chip from '@mui/material/Chip';
 const Nav = () => {
   return (
     <>
-    <div>
       <div className="div-nav">
         <nav className="navigation">
-          {routes.map((route) => (
-            <div key={route.name} className="navlink">
-              <NavLink
+              <NavLink className="navlink"
                 style={({ isActive }) => ({
                   color: isActive ? "white" : "black",
                   backgroundColor: isActive ? "#285943" : "white",
@@ -24,21 +21,43 @@ const Nav = () => {
                   padding: "20px",
                   textDecoration: "none",
                 })}
-                to={route.path}
+                to="/" end
               >
-                {route.name}
+                HOME
               </NavLink>
-            </div>
-          ))}
+              <NavLink  className="navlink"
+                style={({ isActive }) => ({
+                  color: isActive ? "white" : "black",
+                  backgroundColor: isActive ? "#285943" : "white",
+                  borderRadius: "35px",
+                  padding: "20px",
+                  textDecoration: "none",
+                })}
+                to="/shop"
+              >
+                SHOP
+              </NavLink>
+              <NavLink  className="navlink"
+                style={({ isActive }) => ({
+                  color: isActive ? "white" : "black",
+                  backgroundColor: isActive ? "#285943" : "white",
+                  borderRadius: "30px",
+                  padding: "20px",
+                  textDecoration: "none",
+                })}
+                to="/about"
+              >
+                ABOUT
+              </NavLink>
         </nav>
 
       </div>
 
       <div>
         <Search/>        
-      </div>
 
       </div>
+
     </>
   );
 };

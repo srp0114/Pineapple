@@ -3,9 +3,14 @@ import { Badge } from "antd";
 import banner from "../images/banner.png";
 import { Link } from "react-router-dom";
 import "../style/Login.css";
+import Nav from "../layout/Nav"
 
 const About = () => {
   return (
+    <>
+    <div>
+      <Nav/>
+    </div>
     <div>
       <br />
       <br />
@@ -56,6 +61,7 @@ const About = () => {
         <button className="bottomButton">로그인</button>
       </Link>
     </div>
+    </>
   );
 };
 

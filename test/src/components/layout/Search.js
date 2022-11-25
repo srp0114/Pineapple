@@ -34,13 +34,14 @@ const App = () => {
             <Input focusBorderColor='#285943' placeholder='교환하고 싶은 물건은?' style={{fontSize:'1em'}} />
             </ChakraProvider>
             
-            </div>
-            
-        </Space>
-        <div onClick={navigateToMyPage}>
-                <AiOutlineUser size="32" className="icon"/>
-        </div>
         
+            </div>
+            <div>
+
+                <AiOutlineUser size="32" className="icon" onClick={navigateToMyPage}/>
+            </div>
+        </Space>
+       
     </>
     );
 };

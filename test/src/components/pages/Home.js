@@ -6,6 +6,7 @@ import data from '../data.js';
 import '../style/Home.css'
 import banner from "../images/banner.png";
 import { Badge } from "antd";
+import Nav from "../layout/Nav"
 import Carousel from 'react-material-ui-carousel'
 
 
@@ -26,7 +27,9 @@ const Home = () => {
 
     return (
         <>
+        <Nav/>
         <div>
+
         <div>
             <Badge size="default" count={<img src={banner} width="90%" />}/>
         </div>
