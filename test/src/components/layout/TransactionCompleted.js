@@ -1,3 +1,6 @@
+import { Button, Radio, Modal, Form, Input, Typography } from 'antd';
+import React, { useState } from 'react';
+import { EditOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 import '../style/TransactionCompleted.css';
 import good_filled from "../images/good-filled.png";
@@ -6,12 +9,7 @@ import poor_filled from "../images/poor-filled.png";
 import good_outlined from "../images/good-outlined.png";
 import average_outlined from "../images/average-outlined.png";
 import poor_outlined from "../images/poor-outlined.png";
-import { Button, Radio, Modal, Form, Input, Typography } from 'antd';
-import React, { useState } from 'react';
-import { EditOutlined } from '@ant-design/icons';
-const { confirm } = Modal;
 const { Text } = Typography;
-
 /*
 const TransactionCompleted = () => {
   return (
