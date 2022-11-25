@@ -1,4 +1,6 @@
 .transactionCompletedBtn {
+    float: right;
+    margin-top: 3px;
     background-color: #285943;
     border: none;
 }
@@ -23,9 +25,8 @@
     /*width: 100%;*/
     /*object-fit: cover;*/
     /*width: inherit;*/
-    margin-left: 45px;
+    margin-left: 40px;
     /*justify-content: center;*/
-    /*border-style: solid;*/
 }
 .emojiRadioBtn {
     /*opacity: 0;*/
@@ -33,9 +34,11 @@
     position: absolute;
     width: 0;
     height: 0;
+    float: left;
 }
 .emojiLabel {
     padding: 5px 15px;
+    float: left;
 }
 
 .modalBtn1 {

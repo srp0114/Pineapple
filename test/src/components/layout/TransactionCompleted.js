@@ -11,13 +11,13 @@ import poor_filled from "../images/poor-filled.png";
 import good_outlined from "../images/good-outlined.png";
 import average_outlined from "../images/average-outlined.png";
 import poor_outlined from "../images/poor-outlined.png";
-
+/*
 const TransactionCompleted = () => {
   return (
     <TransactionCompletedBtn />
   );
 };
-
+*/
 const TransactionCompletedBtn = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -29,11 +29,10 @@ const TransactionCompletedBtn = () => {
         setTimeout(() => {
             setLoading(false);
             setModalOpen(false);
+            // 후기보내기 버튼 비활성화, 텍스트 바꾸기
+            setAvailable(false);
+            setBtnText("후기 보내기 완료");
         }, 1000);
-
-        // 후기보내기 버튼 비활성화, 텍스트 바꾸기
-        setAvailable(false);
-        setBtnText("후기 보내기 완료");
     };
 
     return (
@@ -112,17 +111,17 @@ const EmojiRadioBtns = () => {
 
             <Radio.Button value="Good" id='good' className='emojiRadioBtn'/>
             <label for='good' className='emojiLabel'>
-                {<img src={good ? good_filled : good_outlined} height="70" width="70"/>}
+                {<img src={good ? good_filled : good_outlined} height="75" width="75"/>}
             </label>
             
             <Radio.Button value="Average" id='average' className='emojiRadioBtn'/>
             <label for='average' className='emojiLabel'>
-                {<img src={average ? average_filled : average_outlined} height="70" width="70"/>}
+                {<img src={average ? average_filled : average_outlined} height="75" width="75"/>}
             </label>
 
             <Radio.Button value="Poor" id='poor' className='emojiRadioBtn'/>
             <label for='poor' className='emojiLabel'>
-                {<img src={poor ? poor_filled : poor_outlined} height="70" width="70"/>}
+                {<img src={poor ? poor_filled : poor_outlined} height="75" width="75"/>}
             </label>
         
         </Radio.Group>
@@ -138,4 +137,4 @@ const FromInModal = () => (
     </Form>
 )
 
-export default TransactionCompleted;
+export default TransactionCompletedBtn;

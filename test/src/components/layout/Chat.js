@@ -5,6 +5,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
 import Chatting from "../layout/Chatting";
+import TransactionCompletedBtn from "../layout/TransactionCompleted"
 import "../style/Chat.css"
 
 const Chat = () => {
@@ -26,6 +27,13 @@ const Chat = () => {
   const onChildrenDrawerClose = () => {
     setChildrenDrawer(false);
   };
+
+  const DrawerTitle = () => (
+    <>
+    <span>채팅방</span>
+    <TransactionCompletedBtn/>
+    </>
+  )
 
   return (
     <>
@@ -53,7 +61,7 @@ const Chat = () => {
             채팅방 열기
           </Button>
         <Drawer
-          title="채팅방"
+          title={<DrawerTitle/>}
           width={600}
           placement="left"
           closable={false}
