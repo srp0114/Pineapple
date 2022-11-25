@@ -1,14 +1,14 @@
 import React, { useEffect, useState }from "react";
 import { ChakraProvider, extendTheme, propNames } from '@chakra-ui/react'
-import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup } from '@chakra-ui/react'
+import {Button} from "antd"
 import { Global } from "@emotion/react";
 import data from '../data.js';
 import '../style/Home.css'
 import banner from "../images/banner.png";
 import { Badge } from "antd";
 import Nav from "../layout/Nav"
-import Carousel from 'react-material-ui-carousel'
-
+import { CImage } from '@coreui/react'
 
 const Fonts = () => (
     <Global styles = {`
@@ -28,21 +28,16 @@ const Home = () => {
     return (
         <>
         <Nav/>
-        <div>
-
-        <div>
-            <Badge size="default" count={<img src={banner} width="90%" />}/>
-        </div>
+        <img src={banner}  className="banner"/>
         
         <div className="Item">
         {cards.map((card, i) => {
                 return (
                     <ChakraProvider theme ={theme}>
-                    <Card maxW='sm' className="Card">
+                    <Card  className="Card">
                         <CardBody key={i}>
                             <Image
                             src={card.image}
-                            borderRadius='lg'
                             />
                             <Stack mt='4' spacing='3'>
                                 <Heading size='md' color='#285943'>{card.title}</Heading>
@@ -53,12 +48,14 @@ const Home = () => {
                         <Divider />
                         <CardFooter>
                             <ButtonGroup spacing='2'>
-                            <Button variant='solid' colorScheme='blue'>
-                                Details
-                            </Button>
-                            <Button variant='ghost' colorScheme='blue'>
-                                Add to cart
-                            </Button>
+                                <Button type="primary" shape="round" size="default"
+                                    className='homeButton' >
+                                    Details
+                                </Button>
+                                <Button type="primary" shape="round" size="default"
+                                    className='homeButton' >
+                                    AddToCart
+                                </Button>
                             </ButtonGroup>
                         </CardFooter>
                     </Card>
@@ -66,7 +63,6 @@ const Home = () => {
                 )
             })} 
             </div>
-      </div>
 
        
       </>

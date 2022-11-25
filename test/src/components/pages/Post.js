@@ -9,12 +9,16 @@ import testImg2 from "../images/pineapple.png"
 import testImg3 from "../images/pineapple2.PNG"
 import testImg4 from "../images/pineapple3.jpg"
 import badgeImg from "../images/good-filled.png";
+import Nav from "../layout/Nav"
 
 const Post = () => {
   const location = useLocation();
   const data = location.state.data;
 
   return (
+    <>
+        <Nav/>
+
     <div className='postDiv'>
       <br/><br/><br/>
       <UserProfile/>
@@ -37,6 +41,7 @@ const Post = () => {
         </Col>
       </Row>
     </div>
+    </>
   );
 }
 

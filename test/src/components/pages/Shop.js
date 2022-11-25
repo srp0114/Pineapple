@@ -1,6 +1,7 @@
 import React, { useState }from "react";
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
-import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup } from '@chakra-ui/react'
+import {Button} from "antd"
 import { Global } from "@emotion/react";
 import data from '../data.js';
 import "../style/Shop.css";
@@ -24,11 +25,11 @@ const Shop = () => {
     return (
         <>
         <Nav/>
-        <div className="Item">
+        <div className="cards">
             {cards.map((card, i) => {
                 return (
                     <ChakraProvider theme ={theme}>
-                    <Card maxW='sm' className="Card">
+                    <Card maxW='sm' className="cardStyle">
                         <CardBody key={i}>
                             <Image
                             src={card.image}
@@ -44,13 +45,15 @@ const Shop = () => {
                         <CardFooter>
                             <ButtonGroup spacing='2'>
                             <Link to='/post' state={{data: card}}>
-                                <Button variant='solid' colorScheme='blue'>
+                                <Button type="primary" shape="round" size="default"
+                                    className='button' >
                                     Details
                                 </Button>
                             </Link>
-                            <Button variant='ghost' colorScheme='blue'>
-                                Add to cart
-                            </Button>
+                                <Button type="primary" shape="round" size="default"
+                                    className='button' >
+                                    AddToCart
+                                </Button>
                             </ButtonGroup>
                         </CardFooter>
                     </Card>

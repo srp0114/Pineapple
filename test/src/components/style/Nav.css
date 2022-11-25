@@ -1,14 +1,16 @@
 
 .div-nav {
-  margin-top:4%;
-  margin-left:2%;
+  margin-top:3%;
   float:left;
-  width:50%;
+  width:100%;
 }
  
 .navigation {
   position:-webkit-sticky;
   position:sticky;
+  width:50%;
+  float:left;
+  margin-top:2.2%;
 }
 
 nav {
@@ -26,11 +28,3 @@ nav {
   margin-left:10px;
   margin-right:50px;
 }
-/*
-nav > div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/

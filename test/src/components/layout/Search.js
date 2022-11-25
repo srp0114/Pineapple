@@ -17,32 +17,25 @@ const App = () => {
         navigate("/mypage");
 };
     return (
-        <>
-        
+        <>        
         <div className="login">
             <Link to="../login">
-                <Chip label="로그인" color="success" variant="outlined" className="loginBtn"/>
+            <Chip label="로그인" color="success" variant="outlined" className="loginBtn"/>
             </Link>
-
             <Chat/>
         </div>
 
         <Space className="search">
             <div>
             <ChakraProvider>
-            {/*  <Search placeholder="교환하고 싶은 물건은?"  style={{ width: 300 }} />*/}
-            <Input focusBorderColor='#285943' placeholder='교환하고 싶은 물건은?' style={{fontSize:'1em'}} />
+                <Input focusBorderColor='#285943' placeholder='교환하고 싶은 물건은?' style={{fontSize:'1em'}} />
             </ChakraProvider>
-            
-        
             </div>
             <div>
-
                 <AiOutlineUser size="32" className="icon" onClick={navigateToMyPage}/>
             </div>
         </Space>
-       
-    </>
+        </>
     );
 };
 

@@ -53,11 +53,11 @@ const Chat = () => {
         open={open} 
         extra={
           <Space>
-            <Button onClick={onClose}>Cancel</Button>
-            <Button type="primary" onClick={onClose}> OK </Button>
+            <Button onClick={onClose} className='button'>Cancel</Button>
+            <Button type="primary" onClick={onClose} className='button' > OK </Button>
           </Space>
         }>
-          <Button type="primary" onClick={showChildrenDrawer}>
+          <Button type="primary" onClick={showChildrenDrawer} className='button' >
             채팅방 열기
           </Button>
         <Drawer

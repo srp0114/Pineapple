@@ -45,7 +45,7 @@ export default [
 
   {
     id: 4,
-    image: tumbler2,
+    image: tumbler,
     title: "Black Bag",
     change: "마포",
     content: "Born in Paris",

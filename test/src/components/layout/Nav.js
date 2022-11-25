@@ -13,50 +13,47 @@ const Nav = () => {
     <>
       <div className="div-nav">
         <nav className="navigation">
-              <NavLink className="navlink"
-                style={({ isActive }) => ({
-                  color: isActive ? "white" : "black",
-                  backgroundColor: isActive ? "#285943" : "white",
-                  borderRadius: "30px",
-                  padding: "20px",
-                  textDecoration: "none",
-                })}
-                to="/" end
-              >
-                HOME
-              </NavLink>
-              <NavLink  className="navlink"
-                style={({ isActive }) => ({
-                  color: isActive ? "white" : "black",
-                  backgroundColor: isActive ? "#285943" : "white",
-                  borderRadius: "35px",
-                  padding: "20px",
-                  textDecoration: "none",
-                })}
-                to="/shop"
-              >
-                SHOP
-              </NavLink>
-              <NavLink  className="navlink"
-                style={({ isActive }) => ({
-                  color: isActive ? "white" : "black",
-                  backgroundColor: isActive ? "#285943" : "white",
-                  borderRadius: "30px",
-                  padding: "20px",
-                  textDecoration: "none",
-                })}
-                to="/about"
-              >
-                ABOUT
-              </NavLink>
-        </nav>
-
-      </div>
-
+            <NavLink className="navlink"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "black",
+                backgroundColor: isActive ? "#285943" : "white",
+                borderRadius: "30px",
+                padding: "20px",
+                textDecoration: "none",
+              })}
+              to="/" end
+            >HOME</NavLink>
+            <NavLink  className="navlink"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "black",
+                backgroundColor: isActive ? "#285943" : "white",
+                borderRadius: "30px",
+                padding: "20px",
+                textDecoration: "none",
+              })}
+              to="/shop"
+            >
+              SHOP
+            </NavLink>
+            <NavLink  className="navlink"
+              style={({ isActive }) => ({
+                color: isActive ? "white" : "black",
+                backgroundColor: isActive ? "#285943" : "white",
+                borderRadius: "30px",
+                padding: "20px",
+                textDecoration: "none",
+              })}
+              to="/about"
+            >
+              ABOUT
+          </NavLink>
+      </nav>
       <div>
-        <Search/>        
+      <Search/>        
+    </div>
+    </div>
 
-      </div>
+    
 
     </>
   );
