@@ -7,6 +7,7 @@ import data from '../data.js';
 import "../style/Shop.css";
 import { Link } from "react-router-dom";
 import Nav from "../layout/Nav"
+import PostUploadBtn from "../layout/PostUploadBtn"
 
 const Fonts = () => (
         <Global styles = {`
@@ -25,6 +26,9 @@ const Shop = () => {
     return (
         <>
         <Nav/>
+
+        <PostUploadBtn />
+        
         <div className="cards">
             {cards.map((card, i) => {
                 return (

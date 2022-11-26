@@ -14,6 +14,8 @@ import Post from "./components/pages/Post";
 import Home from "./components/pages/Home";
 import Shop from "./components/pages/Shop";
 import About from "./components/pages/About"
+import PostUploadForm from "./components/layout/PostUploadForm";
+import UploadComplete from "./components/layout/UploadComplete";
 
 const App = () => (
   
@@ -34,6 +36,8 @@ const App = () => (
         <Route path="likelist" element={<LikeList />} />
         <Route path="setting" element={<Setting />} />
       </Route>
+      <Route path="/postUploadForm" element={<PostUploadForm />}/>
+      <Route path="/uploadComplete" element={<UploadComplete />}/>
       <Route path="/try" element={<MyPage />} />
       <Route path="*" element={<>Not found</>} />
     </Routes>

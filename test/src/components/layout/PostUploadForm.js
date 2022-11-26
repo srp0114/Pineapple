@@ -1,11 +1,12 @@
-import React from 'react';
+import React , { useState } from 'react';
 import { PlusOutlined } from '@ant-design/icons';
 import { Form, Upload, Typography, Divider, Button } from 'antd';
-import '../style/PostForm.css';
+import '../style/PostUploadForm.css';
 import { ChakraProvider, Input, Textarea } from '@chakra-ui/react'
+import { Link, useNavigate } from 'react-router-dom';
 const { Title } = Typography;
 
-const PostForm = () => {
+const PostUploadForm = () => {
   return (
     <div className='postForm'>
     <PostFormTitle/>
@@ -21,75 +22,88 @@ const PostFormTitle = () => (
     </div>
 )
 
-const FormContent = () => (
-    <>
-    <Form
-        labelCol={{
-          span: 4,
-        }}
-        wrapperCol={{
-          span: 14,
-        }}
-        layout="horizontal"
-      >
-        
-        <Form.Item label="상품명">
-          <ChakraProvider>
-          <Input isRequired={true} focusBorderColor="#285943" />
-          </ChakraProvider>
-        </Form.Item>
+const FormContent = () => {
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-        <Form.Item label="희망교환템">
-          <ChakraProvider>
-          <Input focusBorderColor="#285943"/>
-          </ChakraProvider>
-        </Form.Item>
-       
-        <Form.Item label="Upload" valuePropName="fileList">
-          <Upload size="" action="/upload.do" listType="picture-card">
-            <div>
-              <PlusOutlined />
-              <div
-                style={{
-                  marginTop: 8,
-                }}
-              >
-                Upload
-              </div>
-            </div>
-          </Upload>
-        </Form.Item>
-
-        <Form.Item label="상세 정보">
-          <ChakraProvider>
-          <Textarea focusBorderColor="#285943"/>
-          </ChakraProvider>
-        </Form.Item>
-        
-    </Form>
-    
-    <br/>
-    <FormBtn/>
-    </>
-)
-
-const FormBtn = () => (
-  <div className='formButtons'>
-      <Button type="primary" shape="round" size="large" className='formButtonItem2' /*onClick={chatBtnClicked}*/>
-          취소
-      </Button>
-
-      <Button type="primary" shape="round" size="large" className='formButtonItem1' /*onClick={chatBtnClicked}*/>
-          등록
-      </Button>
-  </div>
-)
-
-
-  function uploadBtnClicked() {
-    // 빈 input form 있나 검사
-
-    alert("내용을 모두 입력해주세요.");
+  const handleUpload = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      // 등록 완료 화면으로
+      navigate("/uploadComplete")
+    }, 1000);
   }
 
-export default PostForm;
+  return (
+      <>
+      <Form
+          labelCol={{
+            span: 4,
+          }}
+          wrapperCol={{
+            span: 14,
+          }}
+          layout="horizontal"
+        >
+          
+          <Form.Item label="상품명">
+            <ChakraProvider>
+            <Input isRequired={true} focusBorderColor="#285943" />
+            </ChakraProvider>
+          </Form.Item>
+
+          <Form.Item label="희망교환템">
+            <ChakraProvider>
+            <Input focusBorderColor="#285943"/>
+            </ChakraProvider>
+          </Form.Item>
+        
+          <Form.Item label="Upload" valuePropName="fileList">
+            <Upload size="" action="/upload.do" listType="picture-card">
+              <div>
+                <PlusOutlined />
+                <div
+                  style={{
+                    marginTop: 8,
+                  }}
+                >
+                  Upload
+                </div>
+              </div>
+            </Upload>
+          </Form.Item>
+
+          <Form.Item label="상세 정보">
+            <ChakraProvider>
+            <Textarea focusBorderColor="#285943"/>
+            </ChakraProvider>
+          </Form.Item>
+          
+      </Form>
+      
+      <br/>
+      <div className='formButtons'>
+        <Link to='/shop'>
+        <Button type="primary" shape="round" size="large" className='formButtonItem2'>
+            취소
+        </Button>
+        </Link>
+        
+        <Button type="primary" shape="round" size="large" className='formButtonItem1'
+         loading={loading}
+         onClick={handleUpload}>
+            등록
+        </Button>
+      </div>
+      </>
+  );
+}
+
+function uploadBtnClicked() {
+  // 빈 input form 있나 검사
+
+  alert("내용을 모두 입력해주세요.");
+}
+
+export default PostUploadForm;
