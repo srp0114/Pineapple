@@ -6,6 +6,7 @@ import { Global } from "@emotion/react";
 import data from '../data.js';
 import "../style/LikeList.css";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Fonts = () => (
         <Global styles = {`
@@ -16,6 +17,23 @@ const Fonts = () => (
         `} 
     />
 )
+
+const ButtonContainer = styled.div`
+  .ant-btn-primary {
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
+  }
+  .ant-btn-primary:hover {
+    background-color: #285943;
+    border-color: #285943;
+    border-width: 1px;
+  }
+  .ant-btn-primary:focus {
+    background-color: #285943;
+    border-color: #285943; 
+  }
+`;
 
 export const LikeList = () => {
     const reverse = [...data].reverse();
@@ -43,16 +61,18 @@ export const LikeList = () => {
                         <Divider />
                         <CardFooter>
                             <ButtonGroup spacing='2'>
+                            <ButtonContainer>
+
                             <Link to='/post' state={{data: card}}>
-                                <Button type="primary" shape="round" size="default"
-                                    className='button'>
+                                <Button type="primary" shape="round" size="default">
                                     Details
                                 </Button>
                             </Link>
-                            <Button type="primary" shape="round" size="default"
-                                className='button'>
-                                Add to cart
-                            </Button>
+                                <Button type="primary" shape="round" size="default"
+                                    style={{margin:"5px"}}>
+                                    AddToCart
+                                </Button>
+                                </ButtonContainer>
                             </ButtonGroup>
                         </CardFooter>
                     </Card>

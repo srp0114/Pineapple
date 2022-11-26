@@ -22,8 +22,6 @@ const MyPage = () => {
     <PageTemplate>
 
       <section className="mypage">
-
-
         <MyPageMenu user={user} />
         <Outlet />
       </section>

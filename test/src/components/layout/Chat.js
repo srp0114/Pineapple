@@ -8,6 +8,8 @@ import Chatting from "../layout/Chatting";
 import TransactionCompletedBtn from "../layout/TransactionCompleted"
 import Box from '@mui/material/Box';
 import "../style/Chat.css"
+import styled from "styled-components";
+
 const Chat = () => {
   const [open, setOpen] = useState(false);
   const [childrenDrawer, setChildrenDrawer] = useState(false);
@@ -28,6 +30,23 @@ const Chat = () => {
     setChildrenDrawer(false);
   };
 
+  const ButtonContainer = styled.div`
+  .ant-btn-primary {
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
+  }
+  .ant-btn-primary:hover {
+    background-color: #285943;
+    border-color: #285943;
+    border-width: 1px;
+  }
+  .ant-btn-primary:focus {
+    background-color: #285943;
+    border-color: #285943; 
+  }
+`;
+
   const DrawerTitle = () => (
     <>
     <span>채팅방</span>
@@ -43,7 +62,6 @@ const Chat = () => {
 
       {/* <ChatOutlinedIcon onClick={showLargeDrawer}/> */}
       </Space>
-
       <Drawer 
         title="채팅방" 
         width={650} 
@@ -52,14 +70,17 @@ const Chat = () => {
         onClose={onClose} 
         open={open} 
         extra={
-          <Space>
-            <Button onClick={onClose} className='button'>Cancel</Button>
-            <Button type="primary" onClick={onClose} className='button' > OK </Button>
-          </Space>
+            <ButtonContainer>
+            <Button type="primary" shape="round" onClick={onClose} className='button' > OK </Button>
+            </ButtonContainer>
         }>
-        <Button type="primary" onClick={showChildrenDrawer} className='button' >
+        <ButtonContainer>
+
+        <Button type="primary" shape="round" onClick={showChildrenDrawer} className='button' >
             채팅방 열기
         </Button>
+        </ButtonContainer>
+
         <Drawer
           title={<DrawerTitle/>}
           width={600}
@@ -71,7 +92,6 @@ const Chat = () => {
           <Chatting/>
         </Drawer>
       </Drawer>
-
 
     </>
   );
