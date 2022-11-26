@@ -64,9 +64,8 @@ const About = () => {
           <br />
           <br />
         </p>
-
       <Link to="../login">
-        <button className="bottomButton">로그인</button>
+        <button className="loginButton">로그인 하러가기</button>
       </Link>
     </div>
     </div> 
