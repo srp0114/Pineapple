@@ -1,10 +1,11 @@
 import React, { useState }from "react";
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
-import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup } from '@chakra-ui/react'
+import {Button} from "antd"
 import { Global } from "@emotion/react";
 import data from '../data.js';
 import "../style/Shop.css";
-
+import { Link } from "react-router-dom";
 
 const Fonts = () => (
         <Global styles = {`
@@ -42,10 +43,14 @@ export const Sell = () => {
                         <Divider />
                         <CardFooter>
                             <ButtonGroup spacing='2'>
-                            <Button variant='solid' colorScheme='blue'>
-                                Details
-                            </Button>
-                            <Button variant='ghost' colorScheme='blue'>
+                            <Link to='/post' state={{data: card}}>
+                                <Button type="primary" shape="round" size="default"
+                                    className='button'>
+                                    Details
+                                </Button>
+                            </Link>
+                            <Button type="primary" shape="round" size="default"
+                                className='button'>
                                 Add to cart
                             </Button>
                             </ButtonGroup>

@@ -9,6 +9,7 @@ import banner from "../images/banner.png";
 import { Badge } from "antd";
 import Nav from "../layout/Nav"
 import { CImage } from '@coreui/react'
+import { Link } from "react-router-dom";
 
 const Fonts = () => (
     <Global styles = {`
@@ -48,10 +49,12 @@ const Home = () => {
                         <Divider />
                         <CardFooter>
                             <ButtonGroup spacing='2'>
+                            <Link to='/post' state={{data: card}}>
                                 <Button type="primary" shape="round" size="default"
                                     className='homeButton' >
                                     Details
                                 </Button>
+                            </Link>
                                 <Button type="primary" shape="round" size="default"
                                     className='homeButton' >
                                     AddToCart

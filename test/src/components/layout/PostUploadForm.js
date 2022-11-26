@@ -60,7 +60,7 @@ const FormContent = () => {
             </ChakraProvider>
           </Form.Item>
         
-          <Form.Item label="Upload" valuePropName="fileList">
+          <Form.Item label="사진 등록" valuePropName="fileList">
             <Upload size="" action="/upload.do" listType="picture-card">
               <div>
                 <PlusOutlined />
