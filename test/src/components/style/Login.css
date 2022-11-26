@@ -17,13 +17,13 @@
 }
 
 .page {
-  margin-top:5%;
-  margin-bottom:5%;
   position: fixed;
   top: 0;
+  bottom: 0;
   width: 100%;
   max-width: 500px;
   padding: 0 20px;
+
   left: 50%;
   transform: translate(-50%, 0);
 
@@ -37,10 +37,9 @@
 }
 
 .titleWrap {
-  margin-top: 40px;
+  margin-top: 77px;
   font-size: 26px;
   font-weight: bold;
-  text-align:center;
   color: #262626;
 }
 
@@ -81,8 +80,9 @@
 }
 
 .bottomButton {
-  width: 460px;
+  width: 100%;
   height: 48px;
+  max-width: 400px;
   border: none;
   font-weight: bold;
   border-radius: 64px;
@@ -115,25 +115,121 @@
   bottom: 0;
   width: 100%;
 }
+.timer {
+  background: -webkit-linear-gradient(left, skyBlue 50%, #eee 50%);
+  /* Foreground color, Background colour */
+  border-radius: 100%;
+  height: 30px;
+  /* Height and width */
+  position: relative;
+  width: 30px;
+  /* Height and width */
+  animation-name: time;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: -webkit-linear-gradient(left, skyBlue 100%, #eee 00%);
+}
+.mask {
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
 
-
-.box {
-  text-align:center;
-  margin:0auto;
+  animation-name: mask;
+  animation-duration: 19.99s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  /* Animation time and number of steps (halved) */
+  transform-origin: 100% 50%;
+  animation-fill-mode: both;
+}
+@keyframes time {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes mask {
+  0% {
+    background: #eee;
+    /* Background colour */
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    background: #eee;
+    /* Background colour */
+    -webkit-transform: rotate(-180deg);
+  }
+  50.01% {
+    background: skyBlue;
+    /* Foreground colour */
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    background: skyBlue;
+    /* Foreground colour */
+    -webkit-transform: rotate(-180deg);
+  }
 }
 
-.aboutBanner {
-  margin-right:10%;
+.bomb {
+  animation-name: bomb;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 8;
+
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  /* Animation time and number of steps (halved) */
+  /* transform-origin: 100% 50%; */
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
 }
 
-
-@font-face {
-  font-family: "NanumSquareBold";
-  src: url("../fonts/NanumSquareNeoOTF-dEb.otf")
+@keyframes bomb {
+  0% {
+    background-image: url("../bomb_animation/bomb2_1.jpg");
+  }
+  10% {
+    background-image: url("../bomb_animation/bomb2_1.jpg");
+  }
+  20% {
+    background-image: url("../bomb_animation/bomb2_2.jpg");
+  }
+  30% {
+    background-image: url("../bomb_animation/bomb2_3.jpg");
+  }
+  40% {
+    background-image: url("../bomb_animation/bomb2_4.jpg");
+  }
+  50% {
+    background-image: url("../bomb_animation/bomb2_5.jpg");
+  }
+  60% {
+    background-image: url("../bomb_animation/bomb2_6.jpg");
+  }
+  70% {
+    background-image: url("../bomb_animation/bomb2_7.jpg");
+  }
+  80% {
+    background-image: url("../bomb_animation/bomb2_8.jpg");
+  }
+  90% {
+    background-image: url("../bomb_animation/bomb2_9.jpg");
+  }
+  100% {
+    background-image: gray;
+  }
 }
 
-
-.fontSize {
-  font-Size:18px;
-  font-family:NanumSquareBold;
+.page_bomb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
