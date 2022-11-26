@@ -14,13 +14,16 @@ const App = () => {
     const navigate = useNavigate();
     const navigateToMyPage = () => {
         navigate("/mypage");
-};
+    };
+
+    const naviageToLoginPage = () => {
+        navigate("/login");
+    };
+
     return (
         <>        
         <div className="login">
-            <Link to="../login">
-            <Chip label="로그인" color="success" variant="outlined" className="loginBtn"/>
-            </Link>
+                <Chip label="로그인" onClick={naviageToLoginPage} color="success" variant="outlined" className="loginBtn"/>
             <Chat/>
         </div>
 
@@ -36,7 +39,6 @@ const App = () => {
         </Space>
         </>
     );
-};
-
+}
 
 export default App;
