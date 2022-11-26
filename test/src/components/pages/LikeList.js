@@ -4,7 +4,7 @@ import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Di
 import {Button} from "antd"
 import { Global } from "@emotion/react";
 import data from '../data.js';
-import "../style/Shop.css";
+import "../style/LikeList.css";
 import { Link } from "react-router-dom";
 
 const Fonts = () => (
@@ -24,11 +24,11 @@ export const LikeList = () => {
 
     return (
         <section className="likelist">
-        <div className="Item">
+        <div className="LikeItem">
             {cards.map((card, i) => {
                 return (
                     <ChakraProvider theme ={theme}>
-                    <Card maxW='sm' className="Card">
+                    <Card maxW='sm' className="LikeCard">
                         <CardBody key={i}>
                             <Image
                             src={card.image}

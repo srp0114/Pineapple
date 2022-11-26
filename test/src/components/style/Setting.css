@@ -1,8 +1,56 @@
 .setting {
-    align-items: center;
-    width: 100%;
     max-width: 500px;
+    width: 100%;
     padding-left: 300px;
-    padding-top: 50px;
+    padding-top: 3%;
+    align-items: center;
 }
 
+.s_contentWrap {
+    margin-top: 26px;
+    flex: 1;
+    width: 460px;
+}
+
+.s_inputTitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: #262626;
+    margin-left: 5%;
+}
+
+
+.s_inputWrap {
+    display: flex;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.s_input {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 17px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.s_input::placeholder {
+    color: #dadada;
+}
+
+.s_bottomButton {
+    width: 460px;
+    height: 48px;
+    max-width: 400px;
+    border: none;
+    font-weight: bold;
+    border-radius: 64px;
+    background-color: #285943;
+    color: white;
+    margin-bottom: 16px;
+    cursor: pointer;
+    margin-left: 5%;
+}
