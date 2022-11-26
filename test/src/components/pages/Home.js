@@ -23,7 +23,8 @@ const Fonts = () => (
 
 
 const Home = () => {
-    const [cards, setCards] = useState(data);
+    const product = [data[0], data[1], data[2], data[3]]
+    const [cards, setCards] = useState(product);
     const theme = extendTheme({fonts:{heading:'NanumSquare'},})
 
     return (

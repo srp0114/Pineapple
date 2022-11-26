@@ -17,7 +17,7 @@ const Nav = () => {
               style={({ isActive }) => ({
                 color: isActive ? "white" : "black",
                 backgroundColor: isActive ? "#285943" : "white",
-                borderRadius: "30px",
+                borderRadius: "50px",
                 padding: "20px",
                 textDecoration: "none",
               })}
@@ -27,7 +27,7 @@ const Nav = () => {
               style={({ isActive }) => ({
                 color: isActive ? "white" : "black",
                 backgroundColor: isActive ? "#285943" : "white",
-                borderRadius: "30px",
+                borderRadius: "50px",
                 padding: "20px",
                 textDecoration: "none",
               })}
@@ -39,7 +39,7 @@ const Nav = () => {
               style={({ isActive }) => ({
                 color: isActive ? "white" : "black",
                 backgroundColor: isActive ? "#285943" : "white",
-                borderRadius: "30px",
+                borderRadius: "50px",
                 padding: "20px",
                 textDecoration: "none",
               })}

@@ -6,8 +6,8 @@ import Stack from '@mui/material/Stack';
 import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
 import Chatting from "../layout/Chatting";
 import TransactionCompletedBtn from "../layout/TransactionCompleted"
+import Box from '@mui/material/Box';
 import "../style/Chat.css"
-
 const Chat = () => {
   const [open, setOpen] = useState(false);
   const [childrenDrawer, setChildrenDrawer] = useState(false);
@@ -45,7 +45,7 @@ const Chat = () => {
       </Space>
 
       <Drawer 
-        title="채팅목록" 
+        title="채팅방" 
         width={650} 
         placement="left" 
         closable={false} 
@@ -57,9 +57,9 @@ const Chat = () => {
             <Button type="primary" onClick={onClose} className='button' > OK </Button>
           </Space>
         }>
-          <Button type="primary" onClick={showChildrenDrawer} className='button' >
+        <Button type="primary" onClick={showChildrenDrawer} className='button' >
             채팅방 열기
-          </Button>
+        </Button>
         <Drawer
           title={<DrawerTitle/>}
           width={600}
