@@ -1,8 +1,12 @@
 .search {
-    margin-top:1.5%;
+    margin-top:2.3%;
     display:fixed;
+    margin-left:15%;
+  }
+
+  .goToLogin {
     float:right;
-    margin-right:5%;
+    margin-right:8%;
   }
 
 .icon {
@@ -10,9 +14,5 @@
   height: 30px;
   margin-left:15px;
   margin-right:15px;
-}
 
-.loginBtn {
-  margin-right:1%;
-  margin-left:21%;
 }

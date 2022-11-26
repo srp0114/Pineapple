@@ -22,10 +22,10 @@ const App = () => {
 
     return (
         <>        
-        <div className="login">
-                <Chip label="로그인" onClick={naviageToLoginPage} color="success" variant="outlined" className="loginBtn"/>
+        <Space className="goToLogin">
+            <Chip label="로그인" onClick={naviageToLoginPage} color="success" variant="outlined" className="loginBtn"/>
             <Chat/>
-        </div>
+        </Space>
 
         <Space className="search">
             <div>
