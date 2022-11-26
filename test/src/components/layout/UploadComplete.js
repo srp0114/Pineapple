@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const UploadComplete = () => (
   <>
-  <br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/>
 
   <Result
     status="success"

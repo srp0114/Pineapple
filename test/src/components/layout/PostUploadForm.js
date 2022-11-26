@@ -18,7 +18,8 @@ const PostUploadForm = () => {
 
 const PostFormTitle = () => (
     <div className='postFormTitle'>
-        <Title>상품 등록</Title>
+      <br/><br/><br/>
+      <Title>상품 등록</Title>
     </div>
 )
 
