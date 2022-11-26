@@ -8,7 +8,9 @@ import testImg from "../images/testImg.png";
 import testImg2 from "../images/pineapple.png"
 import testImg3 from "../images/pineapple2.PNG"
 import testImg4 from "../images/pineapple3.jpg"
-import badgeImg from "../images/good-filled.png";
+import badgeImg0 from "../images/good-filled.png";
+import badgeImg1 from "../images/average-filled.png";
+import badgeImg2 from "../images/poor-filled.png";
 import Nav from "../layout/Nav"
 
 const Post = () => {
@@ -17,7 +19,7 @@ const Post = () => {
 
   return (
     <>
-        <Nav/>
+    <Nav/>
 
     <div className='postDiv'>
       <br/><br/><br/>
@@ -46,11 +48,13 @@ const Post = () => {
 }
 
 const UserProfile = () => {
+  const badgeImages = [badgeImg0, badgeImg1, badgeImg2]
+
   return (
     <div className='userProfile'>
     <Badge
       size="default"
-      count={<img src={badgeImg} width="25"/>}
+      count={<img src={badgeImages[Math.floor(Math.random()*3)]} width="25"/>}
     >
       <Avatar size={50} icon={<UserOutlined />}/>
     </Badge>
@@ -61,19 +65,21 @@ const UserProfile = () => {
 };
 
 const PostImage = (props) => {
-  const [visible, setVisible] = useState(false);
+  //const [visible, setVisible] = useState(false);
 
   return (
     <>
       <Image
-        preview={{
-          visible: false,
-        }}
+        //preview={{ visible: false,}}
         width={300}
         src={props.data.image}
-        onClick={() => setVisible(true)}
+        //onClick={() => setVisible(true)}
       />
-      <div
+    </>
+  )
+}
+/* // Preview a collection from one image.
+<div
         style={{
           display: 'none',
         }}
@@ -90,9 +96,7 @@ const PostImage = (props) => {
           <Image src={testImg4} />
         </Image.PreviewGroup>
       </div>
-    </>
-  )
-}
+*/
 
 const PostDescription = (props) => (
   <table className='descriptionTable'>
