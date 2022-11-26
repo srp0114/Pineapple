@@ -49,7 +49,6 @@ const Post = () => {
 
 const UserProfile = () => {
   const badgeImages = [badgeImg0, badgeImg1, badgeImg2]
-  var commit = "???"
 
   return (
     <div className='userProfile'>
