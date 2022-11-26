@@ -17,13 +17,13 @@
 }
 
 .page {
+  margin-top:5%;
+  margin-bottom:5%;
   position: fixed;
   top: 0;
-  bottom: 0;
   width: 100%;
   max-width: 500px;
   padding: 0 20px;
-
   left: 50%;
   transform: translate(-50%, 0);
 
@@ -37,9 +37,10 @@
 }
 
 .titleWrap {
-  margin-top: 77px;
+  margin-top: 40px;
   font-size: 26px;
   font-weight: bold;
+  text-align:center;
   color: #262626;
 }
 
@@ -80,9 +81,8 @@
 }
 
 .bottomButton {
-  width: 100%;
+  width: 460px;
   height: 48px;
-  max-width: 400px;
   border: none;
   font-weight: bold;
   border-radius: 64px;
@@ -114,4 +114,26 @@
   top: 0;
   bottom: 0;
   width: 100%;
+}
+
+
+.box {
+  text-align:center;
+  margin:0auto;
+}
+
+.aboutBanner {
+  margin-right:10%;
+}
+
+
+@font-face {
+  font-family: "NanumSquareBold";
+  src: url("../fonts/NanumSquareNeoOTF-dEb.otf")
+}
+
+
+.fontSize {
+  font-Size:18px;
+  font-family:NanumSquareBold;
 }

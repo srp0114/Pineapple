@@ -2,7 +2,6 @@ import { Image, Col, Divider, Row, Avatar, Badge, Button } from 'antd';
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { HeartOutlined, HeartFilled, CommentOutlined, UserOutlined } from '@ant-design/icons';
-import 'antd/dist/antd.css';
 import '../style/Post.css';
 import testImg from "../images/testImg.png";
 import testImg2 from "../images/pineapple.png"

@@ -1,8 +1,7 @@
-.mypage {
-    position: flex;
-  }
+
   
   .mypage-menu {
+    margin-top:10%;
     position: fixed;
     width: 100%;
   

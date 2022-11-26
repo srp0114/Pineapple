@@ -1,7 +1,6 @@
 import { Button, Radio, Modal, Form, Input, Typography } from 'antd';
 import React, { useState } from 'react';
 import { EditOutlined } from '@ant-design/icons';
-import 'antd/dist/antd.css';
 import '../style/TransactionCompleted.css';
 import good_filled from "../images/good-filled.png";
 import average_filled from "../images/average-filled.png";

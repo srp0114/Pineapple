@@ -62,12 +62,11 @@ export default function RegisterPage() {
     <div className="container">
       <div className="page">
         <div className="titleWrap">
-          <br />
           회원정보를 입력해주세요
         </div>
 
         <div className="contentWrap">
-          <div className="inputTitle">이메일 주소</div>
+          <div className="inputTitle"><br/>이메일 주소</div>
           <div className="inputWrap">
             <ChakraProvider>
               <Input

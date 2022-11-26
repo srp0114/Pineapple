@@ -1,5 +1,4 @@
 import React from 'react';
-import 'antd/dist/antd.css';
 import {  Space } from 'antd';
 import Chat from "./Chat.js"
 import "../style/Search.css"

@@ -4,7 +4,7 @@ import banner from "../images/banner.png";
 import { Link } from "react-router-dom";
 import "../style/Login.css";
 import Nav from "../layout/Nav"
-
+import {Image} from "mui-image"
 const About = () => {
   return (
     <>
@@ -15,12 +15,24 @@ const About = () => {
       <br />
       <br />
 
-      <Badge size="default" count={<img src={banner} width="1000" />}></Badge>
+      <div className="box">
+        <div  className="aboutBanner">
+        <Image
+        component="img"
+        sx={{
+          height: 1000,
+          width: 800,
+          maxWidth: { xs: 1350, md: 1350 },
+        }}
+
+        src={banner}
+      /> </div>
       <br />
       <br />
       <br />
-      <div class="box1">
-        <p>
+      <br />
+      <br />
+        <p className="fontSize">
           파인애플 물물교환은 귀여운 이미지와 터프한 애니메이션으로 이루어진
           쇼핑몰입니다.
           <br />
@@ -42,7 +54,7 @@ const About = () => {
           <br />
           <br />
           <br />
-          서두르는게 좋을겁니다. 머지않아 물건도 거래도 모두 파인애플처럼
+          서두르는게 좋을겁니다.  머지않아 물건도 거래도 모두 파인애플처럼
           터져버리고 말테니까요!
           <br />
           <br />
@@ -51,16 +63,14 @@ const About = () => {
           <br />
           <br />
           <br />
-          <br />
-          <br />
-          <br />
         </p>
-      </div>
 
       <Link to="../login">
         <button className="bottomButton">로그인</button>
       </Link>
     </div>
+    </div> 
+
     </>
   );
 };

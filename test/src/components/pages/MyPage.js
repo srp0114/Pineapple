@@ -9,9 +9,13 @@ import "../style/MyPage.css"
 const MyPage = () => {
   return (
     <>
-    <Nav/>
+        <Nav/>
+
     <PageTemplate>
+
       <section className="mypage">
+
+
         <MyPageMenu />
         <Outlet />
       </section>

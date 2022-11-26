@@ -4,15 +4,19 @@ import { Form, Upload, Typography, Divider, Button } from 'antd';
 import '../style/PostUploadForm.css';
 import { ChakraProvider, Input, Textarea } from '@chakra-ui/react'
 import { Link, useNavigate } from 'react-router-dom';
+import Nav from "./Nav"
 const { Title } = Typography;
 
 const PostUploadForm = () => {
   return (
+    <>
+    <Nav/>
     <div className='postForm'>
     <PostFormTitle/>
     <Divider orientation="left" />
     <FormContent/>
     </div>
+    </>
   );
 };
 
