@@ -11,7 +11,7 @@ export const sendChat = ({roomId, ...data}) => {
     })
 }
 
-//userName 설정
+//userName 설정, 최종 제출 시 삭제
 export const setName = ({name, uid}) => {
     return push(ref(dbService, `user/`), {
         name: name,

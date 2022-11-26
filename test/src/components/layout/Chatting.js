@@ -7,12 +7,12 @@ import { sendChat, getName } from '../../helper/database';
 import { ref, onValue } from "firebase/database";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Input, Button } from "@chakra-ui/react";
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 
 const Chatting = () => {
   const [message, setMessage] = useState("");
   const [messageList, setMessageList] = useState([])
-  //const navigate = useNavigate()
+  const navigate = useNavigate()
   const [user, setUser] = useState(authService.currentUser)
   const [userNames, setUserNames] = useState(getName())
 
@@ -52,15 +52,16 @@ const Chatting = () => {
   //   }, [user])
 
 //로그아웃 처리
-//   const logOut = () => {
-//     authService.signOut()
-//     alert("로그아웃 되셨습니다.")
-//     navigate('/')
-//   }
+  const logOut = () => {
+    authService.signOut()
+    alert("로그아웃 되셨습니다.")
+    navigate('/login')
+  }
 
+  if(user != null) {
   return (
   <>
-    
+    <Button onClick={() => logOut()}>로그아웃</Button>
     <ChatContainer messageList={messageList} myUid={user.uid} names={userNames} />
     <ChakraProvider>
     <form onSubmit={submit} id="chatForm">
@@ -78,6 +79,12 @@ const Chatting = () => {
     </ChakraProvider>
   </>
 );
+  }
+
+  else {
+    alert("로그인 후 이용 가능합니다!")
+    return <Navigate to="/login" />
+  }
 }
 
 export default Chatting;
