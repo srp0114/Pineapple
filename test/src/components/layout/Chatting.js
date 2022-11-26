@@ -52,16 +52,15 @@ const Chatting = () => {
   //   }, [user])
 
 //로그아웃 처리
-  const logOut = () => {
-    authService.signOut()
-    alert("로그아웃 되셨습니다.")
-    navigate('/login')
-  }
+  // const logOut = () => {
+  //   authService.signOut()
+  //   alert("로그아웃 되셨습니다.")
+  //   navigate('/login')
+  // }
 
   if(user != null) {
   return (
   <>
-    <Button onClick={() => logOut()}>로그아웃</Button>
     <ChatContainer messageList={messageList} myUid={user.uid} names={userNames} />
     <ChakraProvider>
     <form onSubmit={submit} id="chatForm">
