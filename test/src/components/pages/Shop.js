@@ -23,6 +23,7 @@ import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import styled from "styled-components";
 import Timer from "./Timer";
+import { Badge } from "antd";
 
 const Fonts = () => (
   <Global
@@ -87,6 +88,13 @@ const Shop = () => {
               <Card maxW="sm" className="cardStyle">
                 {/* <div class="bomb" ></div> */}
                 <CardBody key={i}>
+                  <div class="badge_right">
+                    <Badge>
+                      <div class="timer">
+                        <div class="mask"></div>
+                      </div>
+                    </Badge>
+                  </div>
                   <Image src={card.image} borderRadius="lg" />
                   <Stack mt="4" spacing="3">
                     <Heading size="md" color="#285943">
