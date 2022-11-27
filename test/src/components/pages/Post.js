@@ -101,7 +101,7 @@ const PostDescription = (props) => (
   <table className='descriptionTable'>
     <tr>
       <th>사용자 ID</th>
-      <td className='descriptionTd'>user1</td>
+      <td className='descriptionTd'>{props.data.userID}</td>
     </tr>
     <br/>
     <tr>

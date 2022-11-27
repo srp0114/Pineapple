@@ -26,6 +26,7 @@ import mirror from "./images/mirror.jpg"
 export default [
   {
     id: 0,
+    userID: "상상부기",
     image: keyboard,
     title: "키보드&마우스",
     change: "에어팟1",
@@ -35,6 +36,7 @@ export default [
 
   {
     id: 1,
+    userID: "가나다라",
     image: kecab,
     title: "키보드 캡",
     change: "부기우산",
@@ -44,6 +46,7 @@ export default [
 
   {
     id: 2,
+    userID: "마바사",
     image: plate,
     title: "플레이트",
     change: "텀블러",
@@ -53,6 +56,7 @@ export default [
 
   {
     id: 3,
+    userID: "안녕하세용",
     image: tumbler,
     title: "스타벅스 텀블러",
     change: "플레이트",
@@ -62,6 +66,7 @@ export default [
 
   {
     id: 4,
+    userID: "캔디캔디",
     image: tumbler2,
     title: "스마일 텀블러",
     change: "머그컵",
@@ -71,6 +76,7 @@ export default [
 
   {
     id: 5,
+    userID: "냠냠",
     image: converse,
     title: "노란색 컨버스하이",
     change: "반스 올드스쿨",
@@ -80,6 +86,7 @@ export default [
 
   {
     id: 6,
+    userID: "한성대20",
     image: iphone,
     title: "아이폰 케이스",
     change: "캐릭터 볼펜",
@@ -88,6 +95,7 @@ export default [
   },
   {
     id: 7,
+    userID: "한성대19",
     image: mirror,
     title: "전신 거울",
     change: "테이블 램프",
@@ -97,6 +105,7 @@ export default [
 
   {
     id: 8,
+    userID: "한성대18",
     image: cap,
     title: "캡 모자",
     change: "맨투맨",
@@ -106,6 +115,7 @@ export default [
 
   {
     id: 9,
+    userID: "한성대21",
     image: diary,
     title: "다이어리",
     change: "스타벅스 텀블러",
@@ -115,6 +125,7 @@ export default [
 
   {
     id: 10,
+    userID: "한성대22",
     image: airpodscase,
     title: "에어팟 케이스",
     change: "아이폰 케이스",
@@ -124,6 +135,7 @@ export default [
 
   {
     id: 11,
+    userID: "한성대23",
     image: bag,
     title: "에코백",
     change: "마우스",
@@ -133,6 +145,7 @@ export default [
 
   {
     id: 12,
+    userID: "화석",
     image: cd,
     title: "레트로 CD",
     change: "팔찌",
@@ -142,6 +155,7 @@ export default [
 
   {
     id: 13,
+    userID: "문구류 광인",
     image: pen,
     title: "캐릭터 볼펜",
     change: "형광펜",
@@ -151,6 +165,7 @@ export default [
 
   {
     id: 14,
+    userID: "은평구인",
     image: pouch,
     title: "파우치",
     change: "미니 에코백",
@@ -160,6 +175,7 @@ export default [
 
   {
     id: 15,
+    userID: "부기부기",
     image: clock,
     title: "알람 시계",
     change: "선풍기",
@@ -169,6 +185,7 @@ export default [
 
   {
     id: 16,
+    userID: "거북이",
     image: rug,
     title: "체크무늬 러그",
     change: "접이식 테이블",
@@ -178,6 +195,7 @@ export default [
 
   {
     id: 17,
+    userID: "토끼",
     image: socks,
     title: "Hope 양말",
     change: "캐릭터 키링",
@@ -187,6 +205,7 @@ export default [
 
   {
     id: 18,
+    userID: "강아지 사랑해",
     image: mtm,
     title: "캘리포니아 맨투맨",
     change: "후드집업",
@@ -196,6 +215,7 @@ export default [
 
   {
     id: 19,
+    userID: "고양이 귀여워",
     image: lamp,
     title: "테이블 램프",
     change: "러그",
