@@ -59,9 +59,7 @@ const Shop = () => {
   return (
     <>
       <Nav />
-
       <PostUploadBtn />
-
       <div className="cards">
         {cards.map((card, i) => {
           return (

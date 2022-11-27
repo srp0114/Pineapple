@@ -69,10 +69,11 @@ const Chatting = () => {
           mx={[1]}
           focusBorderColor="#285943"
           value={message}
+          borderRadius="1em"
           onChange={event => setMessage(event.target.value)}
           type="text" placeholder="텍스트를 입력해주세요..."
         />
-        <Button type='submit' mx={[1]} colorScheme='teal' size='md'>보내기</Button>
+        <Button type='submit' borderRadius="1.2em" mx={[1]} background='white' color="#285943" size='md'>보내기</Button>
     
     </form>
     </ChakraProvider>

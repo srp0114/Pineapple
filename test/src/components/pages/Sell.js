@@ -37,7 +37,7 @@ const ButtonContainer = styled.div`
 
 
 export const Sell = () => {
-    const product = [data[1], data[3], data[5]];
+    const product = [data[1], data[3], data[14]];
     const [cards, setCards] = useState(product);
     const theme = extendTheme({fonts:{heading:'NanumSquare'},})
 

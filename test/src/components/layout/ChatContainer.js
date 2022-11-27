@@ -15,14 +15,14 @@ const ChatContainer = ({messageList = [], myUid, names}) => {
 //{messageList.map((chat, i) => <MessageBox key={i} uid = {chat.uid} isMymessage={myUid === chat.uid ? true : false} message={chat.message} />)}
 
 const StyledChatContainer = styled.div`
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
     display: flex;
     flex-direction: column;
     border-top: 1px solid #000;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
     padding: 1rem;
-    height: 600px;
+    height: 585px;
     overflow: auto;
     background: white;
 `;

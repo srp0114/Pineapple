@@ -10,11 +10,11 @@ const Message = ({isMymessage, message}) => {
 
 const StyledMessage = styled.span`
     margin-bottom: 0.5rem;
-    background: ${props => (props.isMymessage ? 'yellow': 'green')};
+    background: ${props => (props.isMymessage ? '#fce668': '#285943')};
     color: ${props => (props.isMymessage ? 'black': 'white')};
     width: fit-content;
     padding: 12px;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 `;
 
 export default Message;

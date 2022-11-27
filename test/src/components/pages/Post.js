@@ -11,6 +11,24 @@ import badgeImg0 from "../images/good-filled.png";
 import badgeImg1 from "../images/average-filled.png";
 import badgeImg2 from "../images/poor-filled.png";
 import Nav from "../layout/Nav"
+import styled from "styled-components";
+
+const ButtonContainer = styled.div`
+.ant-btn-primary {
+  color: #285943;
+  background-color: white;
+  border-color: #285943;
+}
+.ant-btn-primary:hover {
+  background-color: #285943;
+  border-color: #285943;
+  border-width: 1px;
+}
+.ant-btn-primary:focus {
+  background-color: #285943;
+  border-color: #285943;
+}
+`;
 
 const Post = () => {
   const location = useLocation();
@@ -38,7 +56,9 @@ const Post = () => {
           <br/>
           <PostDescription data={data}/>
           <br/>
+          <ButtonContainer>
           <PostButtons/>
+          </ButtonContainer>
         </Col>
       </Row>
     </div>
