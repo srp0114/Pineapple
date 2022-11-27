@@ -9,6 +9,73 @@ import TransactionCompletedBtn from "../layout/TransactionCompleted"
 import Box from '@mui/material/Box';
 import "../style/Chat.css"
 import styled from "styled-components";
+import { Table, Tag } from 'antd';
+const { Column, ColumnGroup } = Table;
+const data = [
+  {
+    key: '1',
+    name: 'John',
+    changeItem: 32,
+    wantItem: 'New York No. 1 Lake Park',
+    address:'nice',
+  },
+  {
+    key: '2',
+    name: 'Jim',
+    changeItem: 42,
+    wantItem: 'London No. 1 Lake Park',
+    address: 'loser',
+  },
+  {
+    key: '3',
+    name: 'Joe',
+    changeItem: 32,
+    wantItem: 'Sidney No. 1 Lake Park',
+    address: 'cool',
+  },
+  {
+    key: '4',
+    name: 'Joe',
+    changeItem: 32,
+    wantItem: 'Sidney No. 1 Lake Park',
+    address: 'cool',
+  },
+  {
+    key: '5',
+    name: 'Joe',
+    changeItem: 32,
+    wantItem: 'Sidney No. 1 Lake Park',
+    address: 'cool',
+  },
+  {
+    key: '6',
+    name: 'Joe',
+    changeItem: 32,
+    wantItem: 'Sidney No. 1 Lake Park',
+    address: 'cool',
+  },
+  {
+    key: '7',
+    name: 'Joe',
+    changeItem: 32,
+    wantItem: 'Sidney No. 1 Lake Park',
+    address: 'cool',
+  },
+  {
+    key: '8',
+    name: 'Joe',
+    changeItem: 32,
+    wantItem: 'Sidney No. 1 Lake Park',
+    address: 'cool',
+  },
+  {
+    key: '9',
+    name: 'Joe',
+    changeItem: 32,
+    wantItem: 'Sidney No. 1 Lake Park',
+    address: 'cool',
+  },
+];
 
 const Chat = () => {
   const [open, setOpen] = useState(false);
@@ -53,10 +120,9 @@ const Chat = () => {
     <TransactionCompletedBtn/>
     </>
   )
-
+  
   return (
     <>
-
       <Space>
       <Chip label="물물교환 하러가기" color="success" variant="outlined" onClick={showDrawer} />
 
@@ -76,9 +142,24 @@ const Chat = () => {
         }>
         <ButtonContainer>
 
-        <Button type="primary" shape="round" onClick={showChildrenDrawer} className='button' >
-            채팅방 열기
-        </Button>
+        <Table dataSource={data}>
+    <Column title="거래자" dataIndex="name" key="name" />
+    <Column title="교환템" dataIndex="changeItem" key="changeItem" />
+    <Column title="희망교환템" dataIndex="wantItem" key="wantItem" />
+    <Column title="거래지역" dataIndex="address" key="address" />
+
+    <Column
+      title=""
+      key="action"
+      render={(_, record) => (
+        <Space size="middle">
+                  <Button type="primary" shape="round" onClick={showChildrenDrawer} className='button'>거래하기</Button>
+
+        </Space>
+      )}
+    />
+  </Table>
+        
         </ButtonContainer>
 
         <Drawer
