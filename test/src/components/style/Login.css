@@ -227,78 +227,91 @@
   /* Animation time and number of steps (halved) */
   /* transform-origin: 100% 50%; */
   animation-fill-mode: both;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
 }
 
 @keyframes bomb {
   0% {
     display: none;
+    background-color: #262626;
   }
   1% {
     background-image: url("../bomb_animation/bomb2_1.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   10% {
     background-image: url("../bomb_animation/bomb2_1.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   20% {
     background-image: url("../bomb_animation/bomb2_2.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   30% {
     background-image: url("../bomb_animation/bomb2_3.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   40% {
     background-image: url("../bomb_animation/bomb2_4.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   50% {
     background-image: url("../bomb_animation/bomb2_5.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   60% {
     background-image: url("../bomb_animation/bomb2_6.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   70% {
     background-image: url("../bomb_animation/bomb2_7.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   80% {
     background-image: url("../bomb_animation/bomb2_8.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   90% {
     background-image: url("../bomb_animation/bomb2_9.jpg");
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
+    background-color: #262626;
   }
   100% {
     background-size: 130%;
     background-position-x: 50%;
     background-position-y: 50%;
-    background-image: gray;
+    background-color: #262626;
+    background-color: gray;
+    opacity: 0.89;
   }
 }
 .badge_right {

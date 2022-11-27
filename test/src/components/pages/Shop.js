@@ -52,8 +52,28 @@ const ButtonContainer = styled.div`
   }
 `;
 
+// export const Shop_1 = () => {
+//   const product = [data[1], data[3], data[5]];
+//   const [cards, setCards] = useState(product);
+//   const theme = extendTheme({fonts:{heading:'NanumSquare'},})
+
+// }
 const Shop = () => {
-  const [cards, setCards] = useState(data);
+  const product_1 = [
+    data[0],
+    data[1],
+    data[3],
+    data[5],
+    data[7],
+    data[9],
+    data[2],
+    data[4],
+    data[6],
+    data[8],
+    data[10],
+    data[12],
+  ];
+  const [cards, setCards] = useState(product_1);
   const theme = extendTheme({ fonts: { heading: "NanumSquare" } });
 
   return (
@@ -67,7 +87,6 @@ const Shop = () => {
               <Card maxW="sm" className="cardStyle">
                 {/* <div class="bomb" ></div> */}
                 <CardBody key={i}>
-                  <Timer />
                   <Image src={card.image} borderRadius="lg" />
                   <Stack mt="4" spacing="3">
                     <Heading size="md" color="#285943">
@@ -102,7 +121,68 @@ const Shop = () => {
           );
         })}
       </div>
+      <Sell />
     </>
+  );
+};
+
+export const Sell = () => {
+  const product_2 = [
+    data[11],
+    data[13],
+    data[14],
+    data[15],
+    data[16],
+    data[17],
+    data[19],
+  ];
+  const [cards, setCards] = useState(product_2);
+  const theme = extendTheme({ fonts: { heading: "NanumSquare" } });
+
+  return (
+    <section className="Sell">
+      <div className="LikeItem">
+        {cards.map((card, i) => {
+          return (
+            <ChakraProvider theme={theme}>
+              <Card maxW="sm" className="cardStyle">
+                <CardBody key={i}>
+                  <Timer />
+                  <Image src={card.image} borderRadius="lg" />
+                  <Stack mt="4" spacing="3">
+                    <Heading size="md" color="#285943">
+                      {card.title}
+                    </Heading>
+                    <Text>{card.change}</Text>
+                    <Text>{card.address}</Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                  <ButtonGroup spacing="2">
+                    <ButtonContainer>
+                      <Link to="/post" state={{ data: card }}>
+                        <Button type="primary" shape="round" size="default">
+                          Details
+                        </Button>
+                      </Link>
+                      <Button
+                        type="primary"
+                        shape="round"
+                        size="default"
+                        style={{ margin: "5px" }}
+                      >
+                        Add to cart
+                      </Button>
+                    </ButtonContainer>
+                  </ButtonGroup>
+                </CardFooter>
+              </Card>
+            </ChakraProvider>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 
