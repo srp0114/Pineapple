@@ -17,13 +17,13 @@
 }
 
 .page {
-  margin-top:5%;
-  margin-bottom:5%;
   position: fixed;
   top: 0;
+  bottom: 0;
   width: 100%;
   max-width: 500px;
   padding: 0 20px;
+
   left: 50%;
   transform: translate(-50%, 0);
 
@@ -37,10 +37,9 @@
 }
 
 .titleWrap {
-  margin-top: 40px;
+  margin-top: 77px;
   font-size: 26px;
   font-weight: bold;
-  text-align:center;
   color: #262626;
 }
 
@@ -83,24 +82,13 @@
 .bottomButton {
   width: 100%;
   height: 48px;
+  max-width: 400px;
   border: none;
   font-weight: bold;
   border-radius: 64px;
   background-color: #285943;
   color: white;
   margin-bottom: 16px;
-  cursor: pointer;
-}
-
-.loginButton {
-  width: 20%;
-  height: 48px;
-  border: none;
-  font-weight: bold;
-  border-radius: 64px;
-  background-color: #285943;
-  color: white;
-  margin-bottom: 5%;
   cursor: pointer;
 }
 
@@ -126,28 +114,6 @@
   top: 0;
   bottom: 0;
   width: 100%;
-}
-
-
-.box {
-  text-align:center;
-  margin:0auto;
-}
-
-.aboutBanner {
-  margin-right:10%;
-}
-
-
-@font-face {
-  font-family: "NanumSquareBold";
-  src: url("../fonts/NanumSquareNeoOTF-dEb.otf")
-}
-
-
-.fontSize {
-  font-Size:18px;
-  font-family:NanumSquareBold;
 }
 .timer {
   background: -webkit-linear-gradient(left, skyBlue 50%, #eee 50%);
@@ -215,56 +181,89 @@
   position: absolute;
   top: 0;
   width: 100%;
-  
   z-index: 8;
 
+  animation-delay: 20s;
   animation-duration: 1.5s;
   animation-timing-function: linear;
-  animation-iteration-count: 1;
+  /* animation-iteration-count: 1; */
   /* Animation time and number of steps (halved) */
   /* transform-origin: 100% 50%; */
   animation-fill-mode: both;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 2;
 }
 
 @keyframes bomb {
   0% {
+    display: none;
+  }
+  1% {
     background-image: url("../bomb_animation/bomb2_1.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   10% {
     background-image: url("../bomb_animation/bomb2_1.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   20% {
     background-image: url("../bomb_animation/bomb2_2.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   30% {
     background-image: url("../bomb_animation/bomb2_3.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   40% {
     background-image: url("../bomb_animation/bomb2_4.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   50% {
     background-image: url("../bomb_animation/bomb2_5.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   60% {
     background-image: url("../bomb_animation/bomb2_6.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   70% {
     background-image: url("../bomb_animation/bomb2_7.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   80% {
     background-image: url("../bomb_animation/bomb2_8.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   90% {
     background-image: url("../bomb_animation/bomb2_9.jpg");
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
   }
   100% {
+    background-size: 130%;
+    background-position-x: 50%;
+    background-position-y: 50%;
     background-image: gray;
   }
 }
-
-.page_bomb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.badge_right {
+  float: right;
 }

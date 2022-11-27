@@ -22,6 +22,7 @@ import PostUploadBtn from "../layout/PostUploadBtn";
 import Fab from "@mui/material/Fab";
 import AddIcon from "@mui/icons-material/Add";
 import styled from "styled-components";
+import Timer from "./Timer";
 
 const Fonts = () => (
   <Global
@@ -66,14 +67,9 @@ const Shop = () => {
           return (
             <ChakraProvider theme={theme}>
               <Card maxW="sm" className="cardStyle">
-                <div class="bomb"></div>
+                {/* <div class="bomb" ></div> */}
                 <CardBody key={i}>
-                    {/* <div class="badge_right">
-                    <Badge>
-                      <div class="timer">
-                        <div class="mask"></div>
-                    </Badge>
-                  </div> */}
+                  <Timer />
                   <Image src={card.image} borderRadius="lg" />
                   <Stack mt="4" spacing="3">
                     <Heading size="md" color="#285943">
