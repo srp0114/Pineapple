@@ -14,7 +14,7 @@
 
 git clone https://github.com/SeoJeongHui/BOMB.git
 
-cd BOMB/test
+cd test
 
 npm install
 
