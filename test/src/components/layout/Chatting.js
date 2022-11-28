@@ -57,19 +57,6 @@ const Chatting = ({item}) => {
     setMessage("");
   };
 
-  //로그인이 풀리면(user 정보가 null이면) 해야되는 일
-  // useEffect(() => {
-  //   console.log(user)
-  //   if(user == null) navigate('/')
-  //   }, [user])
-
-//로그아웃 처리
-  // const logOut = () => {
-  //   authService.signOut()
-  //   alert("로그아웃 되셨습니다.")
-  //   navigate('/login')
-  // }
-
   if(user != null) {
   return (
   <>
