@@ -165,7 +165,7 @@ const PostButtons = () => {
 };
   
 function chatBtnClicked() {
-  alert("chatBtnClicked");
+  alert("물물교환 하러가기 버튼을 클릭해 주세요!");
 }
 
 export default Post;
