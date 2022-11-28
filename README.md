@@ -11,9 +11,6 @@
 ---
 
 ```
-
-git clone https://github.com/SeoJeongHui/BOMB.git
-
 cd test
 
 npm install
