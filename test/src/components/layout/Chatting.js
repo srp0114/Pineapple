@@ -6,26 +6,38 @@ import { authService, dbService } from '../../service/firebase';
 import { sendChat, getName } from '../../helper/database';
 import { ref, onValue } from "firebase/database";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Input, Button } from "@chakra-ui/react";
+import { Input, Button, Heading } from "@chakra-ui/react";
 import { useNavigate, Navigate } from 'react-router-dom';
 
-const Chatting = () => {
+import "../style/Shop.css"
+
+const Chatting = ({item}) => {
   const [message, setMessage] = useState("");
   const [messageList, setMessageList] = useState([])
   const navigate = useNavigate()
   const [user, setUser] = useState(authService.currentUser)
   const [userNames, setUserNames] = useState(getName())
+  const [product, setProduct] = useState(item)
+
+
+  console.log("product = " + product)
+
+  useEffect(() => {
+    setProduct(item)
+  }, [item])
 
   useEffect(() => {
     //setUserNames(getName())
-    onValue(ref(dbService, `chat/yes`), (snapshot) => {
+    if(item === product) {
+    onValue(ref(dbService, `chat/${product}`), (snapshot) => {
         let chats = []
         snapshot.forEach((row) => {
             chats.push(row.val())
         })
         setMessageList(chats)
       })
-  }, [])
+    }
+  }, [product])
 
   const submit = async (e) => {
     e.preventDefault();
@@ -33,7 +45,7 @@ const Chatting = () => {
     if(message != "") {
       try {
         await sendChat({
-          roomId: "yes",
+          roomId: product,
           message: message,
           timestamp: Date.now(),
           uid: user.uid
@@ -61,8 +73,9 @@ const Chatting = () => {
   if(user != null) {
   return (
   <>
+  <ChakraProvider>
+    <Heading size="md" mb={[5]} color="#285943">{item}</Heading>
     <ChatContainer messageList={messageList} myUid={user.uid} names={userNames} />
-    <ChakraProvider>
     <form onSubmit={submit} id="chatForm">
       
         <Input

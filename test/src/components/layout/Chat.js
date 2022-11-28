@@ -17,6 +17,7 @@ const { Column, ColumnGroup } = Table;
 const Chat = () => {
   const [open, setOpen] = useState(false);
   const [childrenDrawer, setChildrenDrawer] = useState(false);
+  const [product, setProduct] = useState("")
 
   const showDrawer = () => {
     setOpen(true);
@@ -26,8 +27,9 @@ const Chat = () => {
     setOpen(false);
   };
 
-  const showChildrenDrawer = () => {
+  const showChildrenDrawer = ({title}) => {
     setChildrenDrawer(true);
+    setProduct(title)
   };
 
   const onChildrenDrawerClose = () => {
@@ -58,6 +60,7 @@ const Chat = () => {
     </>
   )
   
+  
   return (
     <>
       <Space>
@@ -65,6 +68,7 @@ const Chat = () => {
 
       {/* <ChatOutlinedIcon onClick={showLargeDrawer}/> */}
       </Space>
+      
       <Drawer 
         title="채팅목록" 
         width={650} 
@@ -88,12 +92,13 @@ const Chat = () => {
           <Column
             title=""
             key="action"
-            render={(_, record) => (
+            render={(_, record) => {
+              return (
               <Space size="middle">
-                        <Button type="primary" shape="round" onClick={showChildrenDrawer} className='button'>거래하기</Button>
+                        <Button type="primary" shape="round" onClick={() => showChildrenDrawer(record)} className='button'>거래하기</Button>
 
               </Space>
-            )}
+            )}}
           />
         </Table>
         
@@ -107,11 +112,11 @@ const Chat = () => {
           onClose={onChildrenDrawerClose}
           open={childrenDrawer}
         >
-          <Chatting/>
+          <Chatting item={product}/>
         </Drawer>
       </Drawer>
-
     </>
   );
 };
+
 export default Chat;
