@@ -17,8 +17,7 @@ import About from "./components/pages/About"
 import PostUploadForm from "./components/layout/PostUploadForm";
 import UploadComplete from "./components/layout/UploadComplete";
 
-const App = () => (
-  
+const App = () => ( 
     <Routes>        
       <Route path="/" element={<Home />}/>
       <Route path="/shop" element={<Shop />}/>

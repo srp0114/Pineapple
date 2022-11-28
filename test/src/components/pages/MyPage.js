@@ -3,9 +3,7 @@ import { Outlet } from "react-router-dom";
 import Nav from "../layout/Nav";
 import { MyPageMenu } from "../layout/MyPageMenu";
 import profile_img from "../images/profile.png";
-
 import "../style/MyPage.css"
-
 import { authService, dbService } from "../../service/firebase";
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";

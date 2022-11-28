@@ -1,10 +1,10 @@
 import React from "react";
-import { Badge } from "antd";
-import banner from "../images/banner.png";
 import { Link } from "react-router-dom";
-import "../style/Login.css";
 import Nav from "../layout/Nav"
 import {Image} from "mui-image"
+import banner from "../images/banner.png";
+import "../style/Login.css";
+
 const About = () => {
   return (
     <>

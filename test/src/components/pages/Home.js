@@ -1,29 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { ChakraProvider, extendTheme, propNames } from "@chakra-ui/react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
-  Stack,
-  Heading,
-  Text,
-  Divider,
-  ButtonGroup,
-} from "@chakra-ui/react";
+import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup } from "@chakra-ui/react";
 import { Button } from "antd";
 import { Global } from "@emotion/react";
-import data from "../data.js";
-import "../style/Home.css";
-import banner from "../images/banner.png";
 import { Badge } from "antd";
-import Nav from "../layout/Nav";
-import { CImage } from "@coreui/react";
-import styled from "styled-components";
-
 import { Link } from "react-router-dom";
-import Timer from "./Timer";
+
+import Nav from "../layout/Nav";
+import data from "../data.js";
+import banner from "../images/banner.png";
+import styled from "styled-components";
+import "../style/Home.css";
 
 const Fonts = () => (
   <Global

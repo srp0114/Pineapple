@@ -1,12 +1,12 @@
 import React from 'react';
 import {  Space } from 'antd';
-import Chat from "./Chat.js"
-import "../style/Search.css"
 import {AiOutlineUser} from "react-icons/ai";
 import { useNavigate, Link } from "react-router-dom";
 import { Input } from '@chakra-ui/react'
 import { ChakraProvider } from '@chakra-ui/react'
 import Chip from '@mui/material/Chip';
+import Chat from "./Chat.js"
+import "../style/Search.css"
 
 //const { Search } = Input;
 

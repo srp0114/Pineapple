@@ -1,12 +1,8 @@
 import React from "react";
-import { NavLink, Route, Link } from "react-router-dom";
-import routes from "../../routes.js";
-import "../style/Nav.css"
+import { NavLink } from "react-router-dom";
 import Search from "./Search.js"
-import MyPage from "../pages/MyPage.js";
-import banner from "../images/banner.png";
-import { Badge } from "antd";
-import Chip from '@mui/material/Chip';
+import "../style/Nav.css"
+
 
 const Nav = () => {
   return (

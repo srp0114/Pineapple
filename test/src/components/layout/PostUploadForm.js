@@ -5,7 +5,25 @@ import '../style/PostUploadForm.css';
 import { ChakraProvider, Input, Textarea } from '@chakra-ui/react'
 import { Link, useNavigate } from 'react-router-dom';
 import Nav from "./Nav"
+import styled from "styled-components";
+
 const { Title } = Typography;
+
+const ButtonContainer = styled.div`
+.ant-btn-primary {
+    background-color: #285943;
+    border: none;
+}
+.ant-btn-primary:hover {
+    background-color: #285943;
+    border: none;
+}
+.ant-btn-primary:focus {
+    background-color: #285943;
+    border: none;
+    color: white;
+}
+`;
 
 const PostUploadForm = () => {
   return (
@@ -89,6 +107,7 @@ const FormContent = () => {
       
       <br/>
       <div className='formButtons'>
+        <ButtonContainer>
         <Link to='/shop'>
         <Button type="primary" shape="round" size="large" className='formButtonItem2'>
             취소
@@ -100,6 +119,7 @@ const FormContent = () => {
          onClick={handleUpload}>
             등록
         </Button>
+        </ButtonContainer>
       </div>
       </>
   );

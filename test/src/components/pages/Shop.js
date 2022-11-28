@@ -1,29 +1,17 @@
 import React, { useState } from "react";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Image,
-  Stack,
-  Heading,
-  Text,
-  Divider,
-  ButtonGroup,
-} from "@chakra-ui/react";
+import { Card, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup } from "@chakra-ui/react";
 import { Button } from "antd";
 import { Global } from "@emotion/react";
-import data from "../data.js";
-import "../style/Shop.css";
 import { Link } from "react-router-dom";
-import Nav from "../layout/Nav";
-import PostUploadBtn from "../layout/PostUploadBtn";
-import Fab from "@mui/material/Fab";
-import AddIcon from "@mui/icons-material/Add";
-import styled from "styled-components";
-import Timer from "./Timer";
 import { Badge } from "antd";
+
+import Nav from "../layout/Nav";
+import Timer from "./Timer";
+import data from "../data.js";
+import PostUploadBtn from "../layout/PostUploadBtn";
+import "../style/Shop.css";
+import styled from "styled-components";
 
 const Fonts = () => (
   <Global
@@ -57,17 +45,17 @@ const ButtonContainer = styled.div`
 //   const product = [data[1], data[3], data[5]];
 //   const [cards, setCards] = useState(product);
 //   const theme = extendTheme({fonts:{heading:'NanumSquare'},})
-
 // }
+
 const Shop = () => {
   const product_1 = [
     data[0],
     data[1],
     data[3],
-    data[5],
+    data[2],
     data[7],
     data[9],
-    data[2],
+    data[5],
     data[4],
     data[6],
     data[8],

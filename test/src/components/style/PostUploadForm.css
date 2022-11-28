@@ -34,7 +34,8 @@
 }
 .formButtonItem2 {
   flex-basis: 80px;
-  color: #285943;
+  color: white;
+  /*color: #285943;*/
   background-color: white;
   border-color: #285943;
 }

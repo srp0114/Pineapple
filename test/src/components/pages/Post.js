@@ -13,26 +13,27 @@ import badgeImg2 from "../images/poor-filled.png";
 import Nav from "../layout/Nav"
 import styled from "styled-components";
 
-const ButtonContainer = styled.div`
-.ant-btn-primary {
-  color: #285943;
-  background-color: white;
-  border-color: #285943;
-}
-.ant-btn-primary:hover {
-  background-color: #285943;
-  border-color: #285943;
-  border-width: 1px;
-}
-.ant-btn-primary:focus {
-  background-color: #285943;
-  border-color: #285943;
-}
-`;
-
 const Post = () => {
   const location = useLocation();
   const data = location.state.data;
+
+  const ButtonContainer = styled.div`
+  .ant-btn-primary {
+    background-color: #285943;
+    border-color: #285943;
+    border-width: 3px;
+  }
+  .ant-btn-primary:hover {
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
+  }
+  .ant-btn-primary:focus {
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
+  }
+`;
 
   return (
     <>
@@ -120,22 +121,22 @@ const PostImage = (props) => {
 const PostDescription = (props) => (
   <table className='descriptionTable'>
     <tr>
-      <th>사용자 ID</th>
+      <th className='descriptionTh'>사용자 ID</th>
       <td className='descriptionTd'>{props.data.userID}</td>
     </tr>
     <br/>
     <tr>
-      <th>희망교환템</th>
+      <th className='descriptionTh'>희망교환템</th>
       <td className='descriptionTd'>{props.data.change}</td>
     </tr>
     <br/>
     <tr>
-      <th>거래 지역</th>
+      <th className='descriptionTh'>거래 지역</th>
       <td className='descriptionTd'>{props.data.address}</td>
     </tr>
     <br/>
     <tr>
-      <th>상세정보</th>
+      <th className='descriptionTh'>상세정보</th>
       <td className='descriptionTd'>{props.data.content}</td>
     </tr>
   </table>

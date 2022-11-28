@@ -11,8 +11,12 @@
 .transactionCompletedBtn:focus {
     background-color: #285943;
     border: none;
+    color: white;
 }
 
+.modalBodyStyle {
+    height: 1000px;
+}
 .modalTitle {
     font-size: 20px;
     font-weight: bold;
@@ -41,24 +45,9 @@
     float: left;
 }
 
-.modalBtn1 {
-    flex-basis: 80px;
-    color: #285943;
-    background-color: white;
-    border-color: #285943;
-    
-}
-.modalBtn1:hover {
-    color: #285943;
-    background-color: white;
-    border-color: #285943;
-}
-.modalBtn1:focus {
-    color: #285943;
-    background-color: white;
-    border-color: #285943;
-}
 .modalBtn2 {
+    color: white;
+    float: right;
     flex-basis: 80px;
     background-color: #285943;
     border: none;
@@ -70,4 +59,21 @@
 .modalBtn2:focus {
     color: white;
     background-color: #285943;
+}
+.modalBtn1 {
+    float: right;
+    flex-basis: 80px;
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
+}
+.modalBtn1:hover {
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
+}
+.modalBtn1:focus {
+    color: #285943;
+    background-color: white;
+    border-color: #285943;
 }

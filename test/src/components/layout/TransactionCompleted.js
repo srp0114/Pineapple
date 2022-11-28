@@ -8,6 +8,7 @@ import poor_filled from "../images/poor-filled.png";
 import good_outlined from "../images/good-outlined.png";
 import average_outlined from "../images/average-outlined.png";
 import poor_outlined from "../images/poor-outlined.png";
+import styled from "styled-components";
 const { Text } = Typography;
 /*
 const TransactionCompleted = () => {
@@ -33,14 +34,86 @@ const TransactionCompletedBtn = () => {
         }, 1000);
     };
 
+    const ButtonContainer = styled.div`
+    .ant-btn-primary {
+        background-color: #285943;
+        border: none;
+    }
+    .ant-btn-primary:hover {
+        background-color: #285943;
+        border: none;
+    }
+    .ant-btn-primary:focus {
+        background-color: #285943;
+        border: none;
+        color: white;
+    }
+    `;
+
+    const ModalButton1Container = styled.div`
+    .ant-btn-primary {
+        color: #285943;
+    background-color: white;
+    border-color: #285943;
+    }
+    .ant-btn-primary:hover {
+        color: #285943;
+    background-color: white;
+    border-color: #285943;
+    }
+    .ant-btn-primary:focus {
+        color: #285943;
+    background-color: white;
+    border-color: #285943;
+    }
+    `;
+    const ModalButton2Container = styled.div`
+    .ant-btn-primary {
+        color: white;
+        background-color: #285943;
+    border: none;
+    }
+    .ant-btn-primary:hover {
+        color: white;
+    background-color: #285943;
+    }
+    .ant-btn-primary:focus {
+        color: white;
+    background-color: #285943;
+    }
+    `;
+    const FooterBtn1 = () => (
+        <Button /*key="back"*/ shape="round"
+             onClick={() => setModalOpen(false)}
+             className='modalBtn2'>
+              Cancel
+            </Button>
+    )
+    const FooterBtn2 = () => (
+        <Button key="submit" type="primary" shape="round"
+             loading={loading}
+             onClick={handleSubmit}
+             className='modalBtn2'>
+              Submit
+            </Button>
+    )
+    const FooterBtns = () => (
+        [
+            <FooterBtn2/>,
+            <FooterBtn1/>,
+        ]
+    )
+
     return (
         <>
+        <ButtonContainer>
         <Button type="primary" shape="round" className='transactionCompletedBtn'
          onClick={() => setModalOpen(true)}
          disabled={!available}>
             {<EditOutlined />}{btnText}
         </Button>
-        
+        </ButtonContainer>
+
         <Modal
             //title="${user}님과의 거래는 어떠셨나요?"
             title={
@@ -54,22 +127,12 @@ const TransactionCompletedBtn = () => {
             okText="Submit"
             onOk={() => setModalOpen(false)}
             onCancel={() => setModalOpen(false)}
-            footer={[
-                <Button key="back" shape="round"
-                 onClick={() => setModalOpen(false)}
-                 className='modalBtn1'>
-                  Cancel
-                </Button>,
-                <Button key="submit" type="primary" shape="round"
-                 loading={loading}
-                 onClick={handleSubmit}
-                 className='modalBtn2'>
-                  Submit
-                </Button>,
-            ]}
-            width={450} >
+            footer={<ModalButton2Container><FooterBtns/></ModalButton2Container>}
+            width={450}
+            /*className='modalBodyStyle'*/ >
             <TransactionCompletedModalContent />
         </Modal>
+        
         </>
     );
 }

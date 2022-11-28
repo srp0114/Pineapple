@@ -1,8 +1,8 @@
 import React from "react";
 import { FloatButton } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
-import '../style/PostUploadBtn.css';
 import { Link } from "react-router-dom";
+import '../style/PostUploadBtn.css';
 
 const PostUploadBtn = () => {
 
