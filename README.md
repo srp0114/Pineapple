@@ -2,20 +2,23 @@
 
 ### 웹프레임워크1 팀 프로젝트
 
-### B반 7팀 리액트 뿌셔뿌셔
+### B반 7팀 리액트 뿌셔뿌셔  
 
 <br/>
-<br/>
-
+  
 #### 시작하기
 
 ---
 
-#### git clone https://github.com/SeoJeongHui/BOMB.git
+```
 
-#### cd BOMB/test
+git clone https://github.com/SeoJeongHui/BOMB.git
 
-#### npm install
+cd BOMB/test
 
-#### npm start
+npm install
+
+npm start
+
+```
 
