@@ -11,7 +11,7 @@
 ---
 
 ```
-cd test
+cd pineapple
 
 npm install
 
